@@ -5,13 +5,12 @@ Hero
 "use client"
 
 // Imports
-import { ArrowRight, Check, Sparkles } from "lucide-react"
+import { ArrowRight, Check } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
-import { AppBadge } from "@/components/ui/app-badge"
 import { BorderBeam } from "@/components/ui/border-beam"
 import { Button } from "@/components/ui/button"
 
@@ -24,9 +23,9 @@ export default function HeroPage() {
       <AnimationContainer delay={0.1} className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
 
         {/* Eyebrow Badge */}
-        <AppBadge icon={<Sparkles className="h-3.5 w-3.5" />} className="mb-8">
+        {/* <AppBadge icon={<Sparkles className="h-3.5 w-3.5" />} className="mb-8">
           Job application tracker &amp; job hunt organizer
-        </AppBadge>
+        </AppBadge> */}
 
         {/* Main Headline */}
         <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
@@ -68,9 +67,9 @@ export default function HeroPage() {
             asChild
             className="w-full sm:w-auto h-12 px-8 text-base bg-[#571FFF] hover:bg-[#571FFF]/90 shadow-lg shadow-[#571FFF]/25"
           >
-            <Link href="#waitlist">
+            <a href="https://web.orbbt.app" target="_blank">
               Try free on web <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+            </a>
           </Button>
           <Button
             variant="outline"
@@ -107,7 +106,7 @@ export default function HeroPage() {
             />
             <Image
               src="/image.png"
-              alt="orbbt. job application tracker dashboard preview"
+              alt="orbbt job application tracker dashboard preview"
               width={1600}
               height={847}
               priority

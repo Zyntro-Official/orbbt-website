@@ -16,7 +16,7 @@ const inter = Inter({
 
 // Metadata
 export const metadata: Metadata = {
-  title: "orbbt. — Your job hunt, organized.",
+  title: "Orbbt — Your job hunt, organized.",
   description:
     "Track applications, research companies, remember deadlines, and follow up from one calm place. Built by Zyntro.",
   icons: {

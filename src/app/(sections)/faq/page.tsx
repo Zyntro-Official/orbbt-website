@@ -9,10 +9,10 @@ import { useState } from "react"
 
 // UI Components
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from "@/components/ui/accordion"
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
@@ -20,12 +20,12 @@ import { AppBadge } from "@/components/ui/app-badge"
 // Constants
 const FAQS = [
   {
-    q: "What is orbbt.?",
+    q: "What is orbbt?",
     a: "A single workspace for your job search: saved jobs, applications, resume versions, interview prep, and follow-ups in one place.",
   },
   {
     q: "Can I import jobs I already saved?",
-    a: "Yes. Paste a job URL or use the browser extension, and orbbt. pulls in the role, company, and description.",
+    a: "Yes. Paste a job URL or use the browser extension, and orbbt pulls in the role, company, and description.",
   },
   {
     q: "Does the AI apply to jobs for me?",

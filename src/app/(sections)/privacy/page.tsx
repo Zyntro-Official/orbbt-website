@@ -5,6 +5,14 @@ Privacy Policy
 // Imports
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
+import type { Metadata } from "next"
+
+// Metadata
+export const metadata: Metadata = {
+  title: "Privacy Policy — Orbbt",
+  description:
+    "How orbbt collects, uses, and protects your job hunt data, and the control you have over your account.",
+}
 
 export default function PrivacyPage() {
   return (
@@ -27,7 +35,7 @@ export default function PrivacyPage() {
         {/* Content */}
         <div className="space-y-6">
           <p className="text-muted-foreground leading-relaxed">
-            orbbt. uses information you provide, including account details, job entries, contacts, notes, and messages sent through forms, to operate and improve the product.
+            orbbt uses information you provide, including account details, job entries, contacts, notes, and messages sent through forms, to operate and improve the product.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">

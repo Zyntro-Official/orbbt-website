@@ -1,16 +1,10 @@
 /*
-Navbar Component
+  Navbar Component
 */
 
 "use client"
 
 // Imports
-import { FileText, Menu, Receipt, Shield, Smartphone } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import * as React from "react"
-
-// UI Components
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -30,6 +24,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
+import { FileText, Menu, Receipt, Shield, Smartphone } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import * as React from "react"
+import BrandLogo from "./BrandLogo"
 
 // Policy Items Data
 const policyItems = [
@@ -62,26 +61,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         
         {/* Left: Logo */}
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center gap-2.5">
-            <Image
-              src="/orbbt-logo.png"
-              alt="orbbt. logo"
-              width={32}
-              height={32}
-              priority
-              className="h-8 w-8 object-contain"
-            />
-            <span className="grid gap-0.5 leading-none">
-              <span className="text-[18px] font-extrabold tracking-tight text-foreground">
-                orbbt.
-              </span>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-                by zyntro
-              </span>
-            </span>
-          </Link>
-        </div>
+        <BrandLogo />
 
         {/* Center: Desktop Nav Links */}
         <nav className="hidden items-center gap-1 md:flex">
@@ -163,11 +143,15 @@ export function Navbar() {
 
         {/* Right: Auth Action Buttons */}
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="ghost" className="font-medium hover:text-primary">
-            Login
+          <Button asChild variant="ghost" className="font-medium hover:text-primary cursor-pointer">
+            <a href="https://web.orbbt.app/login" target="_blank" rel="noopener noreferrer">
+              Login
+            </a>
           </Button>
-          <Button variant="default" className="font-medium bg-[#571FFF] hover:bg-[#571FFF]/90 shadow-sm shadow-[#571FFF]/20">
-            Signup
+          <Button asChild variant="default" className="font-medium bg-[#571FFF] hover:bg-[#571FFF]/90 shadow-sm shadow-[#571FFF]/20 cursor-pointer">
+            <a href="https://web.orbbt.app/signup" target="_blank" rel="noopener noreferrer">
+              Signup
+            </a>
           </Button>
         </div>
 
@@ -188,14 +172,14 @@ export function Navbar() {
                   <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2.5">
                     <Image
                       src="/orbbt-logo.png"
-                      alt="orbbt. logo"
+                      alt="orbbt logo"
                       width={32}
                       height={32}
                       className="h-8 w-8 object-contain"
                     />
                     <span className="grid gap-0.5 leading-none text-left">
                       <span className="text-[18px] font-extrabold tracking-tight text-foreground">
-                        orbbt.
+                        orbbt
                       </span>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
                         by zyntro
@@ -263,11 +247,15 @@ export function Navbar() {
 
               {/* Mobile Auth Buttons */}
               <SheetFooter className="mt-auto">
-                <Button variant="outline" className="w-full justify-center">
-                  Login
+                <Button asChild variant="outline" className="w-full justify-center">
+                  <a href="https://web.orbbt.app/login" target="_blank" rel="noopener noreferrer">
+                    Login
+                  </a>
                 </Button>
-                <Button variant="default" className="w-full justify-center bg-[#571FFF] hover:bg-[#571FFF]/90 text-white">
-                  Signup
+                <Button asChild variant="default" className="w-full justify-center bg-[#571FFF] hover:bg-[#571FFF]/90 text-white">
+                  <a href="https://web.orbbt.app/signup" target="_blank" rel="noopener noreferrer">
+                    Signup
+                  </a>
                 </Button>
               </SheetFooter>
             </SheetContent>

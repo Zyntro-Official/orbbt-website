@@ -5,6 +5,14 @@ Refund Policy
 // Imports
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
+import type { Metadata } from "next"
+
+// Metadata
+export const metadata: Metadata = {
+  title: "Refund Policy — Orbbt",
+  description:
+    "How refunds, billing issues, free trials, and exceptions work for orbbt plans.",
+}
 
 export default function RefundPage() {
   return (
@@ -27,7 +35,7 @@ export default function RefundPage() {
         {/* Content */}
         <div className="space-y-6">
           <p className="text-muted-foreground leading-relaxed">
-            If orbbt. introduces paid plans, refund eligibility will depend on the plan, billing period, and usage.
+            If orbbt introduces paid plans, refund eligibility will depend on the plan, billing period, and usage.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
@@ -45,7 +53,7 @@ export default function RefundPage() {
             Free trial
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            The free plan or trial access can be used before upgrading, so users can evaluate whether orbbt. fits their job hunt.
+            The free plan or trial access can be used before upgrading, so users can evaluate whether orbbt fits their job hunt.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">

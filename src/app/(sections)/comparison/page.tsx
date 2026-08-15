@@ -76,20 +76,20 @@ export default function ComparisonPage() {
           <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
             Spreadsheets track data.{" "}
             <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              orbbt. tracks momentum.
+              orbbt tracks momentum.
             </span>
           </h2>
 
           {/* Subtitle */}
           <p className="mt-4 text-center text-lg text-muted-foreground max-w-lg">
-            A job hunt gets messy when every next step lives somewhere else. orbbt. turns scattered effort into one organized job search tracker.
+            A job hunt gets messy when every next step lives somewhere else. orbbt turns scattered effort into one organized job search tracker.
           </p>
         </div>
 
         {/* Comparison Table */}
         <div
           className="mt-12 grid gap-8 lg:grid-cols-2"
-          aria-label="Before and after orbbt. comparison"
+          aria-label="Before and after orbbt comparison"
         >
           {/* The Old Way */}
           <AnimationContainer delay={0.2}>
@@ -134,7 +134,7 @@ export default function ComparisonPage() {
                   <ThumbsUp className="size-4 text-green-600 dark:text-green-400" />
                 </div>
                 <h3 className="text-lg font-bold text-foreground">
-                  The orbbt. way
+                  The orbbt way
                 </h3>
               </div>
 

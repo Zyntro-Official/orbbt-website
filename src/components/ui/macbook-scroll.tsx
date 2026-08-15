@@ -28,12 +28,10 @@ import React, { useEffect, useRef, useState } from "react";
 export const MacbookScroll = ({
   src,
   showGradient,
-  title,
   badge,
 }: {
   src?: string;
   showGradient?: boolean;
-  title?: string | React.ReactNode;
   badge?: React.ReactNode;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -62,27 +60,12 @@ export const MacbookScroll = ({
   );
   const translate = useTransform(scrollYProgress, [0, 1], [0, 800]);
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
-  const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   return (
     <div
       ref={ref}
-      className="flex min-h-[120vh] shrink-0 scale-[0.45] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-55 md:scale-100 md:py-20"
+      className="flex min-h-[100vh] shrink-0 scale-[0.45] transform flex-col items-center justify-start py-0 [perspective:800px] sm:scale-55 md:scale-100 md:pt-4"
     >
-      <motion.h2
-        style={{
-          translateY: textTransform,
-          opacity: textOpacity,
-        }}
-        className="mb-20 text-center text-3xl font-bold text-neutral-800 dark:text-white"
-      >
-        {title || (
-          <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
-          </span>
-        )}
-      </motion.h2>
       {/* Lid */}
       <Lid
         src={src}

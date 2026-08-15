@@ -22,7 +22,7 @@ export default function ProductShowcasePage() {
 
           {/* Title */}
           <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
-            See orbbt.{" "}
+            See orbbt{" "}
             <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               in action
             </span>
@@ -39,7 +39,6 @@ export default function ProductShowcasePage() {
       <MacbookScroll
         src="/image.png"
         showGradient={false}
-        title="Web App"
       />
     </section>
   )

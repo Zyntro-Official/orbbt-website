@@ -5,130 +5,33 @@ Problem
 "use client"
 
 // Imports
-import {
-    Bookmark,
-    FileSpreadsheet,
-    FileText,
-    FolderOpen,
-    Globe,
-    Table2,
-} from "lucide-react"
-import Image from "next/image"
+import { X } from "lucide-react"
 
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid"
 
 // Constants — Pain Points
 const PAIN_POINTS = [
   {
-    Icon: FileSpreadsheet,
-    name: "Excel",
+    title: "Scattered trackers",
     description:
-      "A tracker you update once a week and forget to reopen.",
-    href: "#",
-    cta: "",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt=""
-        width={400}
-        height={300}
-        className="absolute -top-10 -right-10 w-40 h-28 object-cover rounded-lg opacity-40 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105"
-      />
-    ),
+      "Excel sheets you update once a week and forget to reopen.",
   },
   {
-    Icon: FileText,
-    name: "Notion",
+    title: "Disorganized notes",
     description:
-      "Notes scattered across pages you can never find again.",
-    href: "#",
-    cta: "",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt=""
-        width={400}
-        height={300}
-        className="absolute -top-10 -right-10 w-40 h-28 object-cover rounded-lg opacity-40 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105"
-      />
-    ),
+      "Notion pages and docs you can never find again.",
   },
   {
-    Icon: Bookmark,
-    name: "Bookmarks",
+    title: "Lost applications",
     description:
-      "Links to postings that expired three weeks ago.",
-    href: "#",
-    cta: "",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt=""
-        width={400}
-        height={300}
-        className="absolute -top-10 -right-10 w-40 h-28 object-cover rounded-lg opacity-40 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105"
-      />
-    ),
+      "Saved jobs and bookmarks that expire before you revisit them.",
   },
   {
-    Icon: Globe,
-    name: "LinkedIn Saved",
+    title: "Resume chaos",
     description:
-      "Dozens of saved jobs you never revisit.",
-    href: "#",
-    cta: "",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt=""
-        width={400}
-        height={300}
-        className="absolute -top-10 -right-10 w-40 h-28 object-cover rounded-lg opacity-40 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105"
-      />
-    ),
-  },
-  {
-    Icon: FolderOpen,
-    name: "Resume folders",
-    description:
-      "resume_final_v7_REAL_v2.pdf and nineteen others.",
-    href: "#",
-    cta: "",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt=""
-        width={400}
-        height={300}
-        className="absolute -top-10 -right-10 w-40 h-28 object-cover rounded-lg opacity-40 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105"
-      />
-    ),
-  },
-  {
-    Icon: Table2,
-    name: "Indeed",
-    description:
-      "Another tab. Another login. Another forgotten password.",
-    href: "#",
-    cta: "",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt=""
-        width={400}
-        height={300}
-        className="absolute -top-10 -right-10 w-40 h-28 object-cover rounded-lg opacity-40 transition-all duration-300 group-hover:opacity-60 group-hover:scale-105"
-      />
-    ),
+      "resume_final_v7_REAL_v2.pdf and nineteen other versions.",
   },
 ]
 
@@ -161,23 +64,33 @@ export default function ProblemPage() {
           </p>
         </div>
 
-        {/* Pain Points Bento Grid */}
-        <BentoGrid className="py-8">
+        {/* Pain Points Grid */}
+        <div className="mx-auto mt-4 grid max-w-4xl gap-4 sm:grid-cols-2">
           {PAIN_POINTS.map((point, idx) => (
-            <BentoCard key={idx} {...point} />
-          ))}
-        </BentoGrid>
+            <AnimationContainer
+              key={point.title}
+              delay={0.1 + idx * 0.08}
+            >
+              <div className="flex h-full items-start gap-4 rounded-xl border border-border/60 bg-background/60 p-5">
+                {/* Problem Indicator */}
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-destructive/10 text-destructive">
+                  <X className="h-4 w-4" strokeWidth={2.5} />
+                </span>
 
-        {/* Solution Card — Full Width */}
-        <div className="mt-8 rounded-2xl border border-primary/20 bg-card p-8 sm:p-10 shadow-sm text-center">
-          <p className="text-2xl sm:text-3xl font-bold text-foreground">
-            Everything belongs in one workspace.
-          </p>
-          <p className="mt-3 text-lg text-muted-foreground">
-            Meet{" "}
-            <span className="font-extrabold text-[#571FFF]">orbbt.</span>
-          </p>
+                {/* Title + Description */}
+                <div className="flex-1">
+                  <h3 className="text-base font-bold text-foreground">
+                    {point.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {point.description}
+                  </p>
+                </div>
+              </div>
+            </AnimationContainer>
+          ))}
         </div>
+
       </AnimationContainer>
     </section>
   )

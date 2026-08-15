@@ -13,7 +13,7 @@ const RESOURCE_CATEGORIES = [
     title: "Guides",
     description: "Learn how to organize your job hunt from start to finish.",
     links: [
-      { label: "Getting started with orbbt.", href: "#" },
+      { label: "Getting started with orbbt", href: "#" },
       { label: "How to research a company before applying", href: "#" },
       { label: "Building a follow-up cadence that works", href: "#" },
     ],

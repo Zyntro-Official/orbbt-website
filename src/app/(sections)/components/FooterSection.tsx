@@ -3,7 +3,7 @@ Footer Section
 */
 
 // Imports
-import Image from "next/image"
+import BrandLogo from "@/components/navigation/BrandLogo"
 import Link from "next/link"
 
 export function FooterSection() {
@@ -11,19 +11,7 @@ export function FooterSection() {
     <footer className="border-t border-border bg-background px-5 py-12">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         {/* Brand */}
-        <div className="flex items-center gap-2">
-          <Image
-            src="/orbbt-logo.png"
-            alt="orbbt. logo"
-            width={20}
-            height={20}
-            className="h-5 w-5 object-contain rounded"
-          />
-          <span className="font-extrabold text-foreground">orbbt.</span>
-          <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
-            by zyntro
-          </span>
-        </div>
+        <BrandLogo />
 
         {/* Nav */}
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
@@ -51,14 +39,11 @@ export function FooterSection() {
           <a href="https://linkedin.com/company/orbbt" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
             LinkedIn
           </a>
-          <a href="https://x.com/orbbt" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-            X
-          </a>
         </nav>
 
         {/* Copyright */}
         <p className="text-xs text-muted-foreground whitespace-nowrap">
-          &copy; {new Date().getFullYear()} orbbt. All rights reserved.
+          &copy; {new Date().getFullYear()} orbbt All rights reserved.
         </p>
       </div>
     </footer>

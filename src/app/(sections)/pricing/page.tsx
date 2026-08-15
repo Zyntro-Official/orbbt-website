@@ -5,7 +5,7 @@ Pricing
 "use client"
 
 // Imports
-import { CheckCircleIcon, CreditCard } from "lucide-react"
+import { CheckCircleIcon } from "lucide-react"
 import { motion } from "motion/react"
 import Link from "next/link"
 import { useState } from "react"
@@ -15,19 +15,19 @@ import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
 import { buttonVariants } from "@/components/ui/button"
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 } from "@/components/ui/tooltip"
 
 // Utils
@@ -106,7 +106,7 @@ export default function PricingPage() {
 
             {/* Subtitle */}
             <p className="mt-4 text-center text-lg text-muted-foreground max-w-lg">
-              Get started with orbbt. today and enjoy more features with our pro
+              Get started with orbbt today and enjoy more features with our pro
               plans.
             </p>
           </div>
@@ -168,7 +168,7 @@ export default function PricingPage() {
 
                     <Card
                       className={cn(
-                        "flex flex-col w-full border-border rounded-xl h-full",
+                        "flex flex-col w-full border-border rounded-xl h-full pt-0",
                         plan.featured && "border-2 border-[#571FFF]",
                       )}
                     >
@@ -178,7 +178,7 @@ export default function PricingPage() {
                           plan.featured
                             ? "bg-[#571FFF]/[0.07]"
                             : "bg-foreground/[0.03]",
-                          plan.featured ? "pt-8" : "",
+                          plan.featured ? "pt-8" : "pt-(--card-spacing)",
                         )}
                       >
                         <CardTitle
@@ -267,18 +267,6 @@ export default function PricingPage() {
               </TabsContent>
             ))}
           </Tabs>
-        </AnimationContainer>
-
-        {/* No Credit Card Note */}
-        <AnimationContainer delay={0.3}>
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-12 max-w-5xl mx-auto w-full">
-            <div className="flex items-center gap-2">
-              <CreditCard className="w-5 h-5 text-foreground" />
-              <span className="text-muted-foreground text-sm">
-                No credit card required
-              </span>
-            </div>
-          </div>
         </AnimationContainer>
       </div>
     </section>

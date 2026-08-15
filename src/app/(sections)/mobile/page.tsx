@@ -56,7 +56,7 @@ export default function MobileWaitlistPage() {
               gradientColor={"#D9D9D955"}
             >
               <h3 className="text-lg font-semibold text-foreground mb-6">
-                Get early access to the orbbt. mobile app.
+                Get early access to the orbbt mobile app.
               </h3>
 
               <form

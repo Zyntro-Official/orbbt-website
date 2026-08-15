@@ -1,6 +1,6 @@
-# orbbt. Landing Page — Codebase Context
+# orbbtLanding Page — Codebase Context
 
-> Single-source context document for sharing the orbbt. landing page codebase with other LLMs.
+> Single-source context document for sharing the orbbtlanding page codebase with other LLMs.
 > Product: **orbbt.** — a job application tracker / job hunt organizer SaaS landing page prototype.
 
 ---
@@ -126,7 +126,7 @@ The flagship page. Sections in order:
 
 8. **How it works** (narrow) — 3 steps: Save a role → Get the context → Know what is next. Platform pills: Mobile app · Web · Chrome extension.
 
-9. **Before & after comparison** — "Spreadsheets track data. orbbt. tracks momentum."
+9. **Before & after comparison** — "Spreadsheets track data. orbbttracks momentum."
    - Bad col (red): jobs scattered, research repeated, deadlines rely on memory, contacts disappear.
    - Good col (green): every application has a home, company context ready, follow-ups visible, relationships organized.
 
@@ -142,7 +142,7 @@ The flagship page. Sections in order:
 12. **Final CTA** — "Ease your mind. Focus on what matters." + Try free / Waitlist buttons.
 
 13. **FAQ** (`#faq`) — accordion (click to toggle `.open`). 4 Q&As:
-    - What is orbbt.? / Is orbbt. a job tracker? / Does orbbt. have a mobile app? / How is orbbt. different?
+    - What is orbbt.? / Is orbbta job tracker? / Does orbbthave a mobile app? / How is orbbtdifferent?
 
 14. **Footer** — 3 cols: Product (Features, Pricing, Try it) · Resources (Privacy, Support, Terms, Refunds) · Connect (Instagram, X, LinkedIn, YouTube). Bottom: brand logo + "Copyright 2026 orbbt."
 
@@ -153,7 +153,7 @@ The flagship page. Sections in order:
 - Footer link to waitlist for early access.
 
 ### 5.3 `waitlist.html` — Mobile app waitlist
-- 2-col grid: left = headline "Get early access to the orbbt. mobile app." + animated orbit graphic with App Store / Play Store chips; right = form (Name / Email / "What describes you?" → Join mobile app waitlist).
+- 2-col grid: left = headline "Get early access to the orbbtmobile app." + animated orbit graphic with App Store / Play Store chips; right = form (Name / Email / "What describes you?" → Join mobile app waitlist).
 - Demo submit note: "Connect this form to your waitlist backend later."
 - Waitlist targets App Store + Play Store early-access waves (iOS + Android planned).
 
@@ -193,7 +193,7 @@ The flagship page. Sections in order:
 - Name: **orbbt.** (always with trailing period in copy). Parent: **Zyntro** ("by zyntro").
 - Support emails: `hello@orbbt.co`, `support@orbbt.co`.
 - Socials placeholder: Instagram `@orbbt`, LinkedIn `orbbt.`, X, YouTube (links are `#` placeholders).
-- Tone: calm, light, confident, slightly poetic ("a quiet place for a very busy search", "Spreadsheets track data. orbbt. tracks momentum.").
+- Tone: calm, light, confident, slightly poetic ("a quiet place for a very busy search", "Spreadsheets track data. orbbttracks momentum.").
 - Copyright: "Copyright 2026 orbbt."
 
 ---

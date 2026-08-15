@@ -5,6 +5,14 @@ Terms and Conditions
 // Imports
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
+import type { Metadata } from "next"
+
+// Metadata
+export const metadata: Metadata = {
+  title: "Terms and Conditions — Orbbt",
+  description:
+    "The terms for using orbbt responsibly, including product scope, acceptable use, and service changes.",
+}
 
 export default function TermsPage() {
   return (
@@ -27,14 +35,14 @@ export default function TermsPage() {
         {/* Content */}
         <div className="space-y-6">
           <p className="text-muted-foreground leading-relaxed">
-            By using orbbt., you agree to use the product responsibly and provide accurate account information.
+            By using orbbt, you agree to use the product responsibly and provide accurate account information.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
             Product scope
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            orbbt. helps organize your job hunt, but it does not guarantee interviews, offers, hiring outcomes, or employer responses.
+            orbbt helps organize your job hunt, but it does not guarantee interviews, offers, hiring outcomes, or employer responses.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
@@ -48,7 +56,7 @@ export default function TermsPage() {
             Service changes
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Features, plans, and availability may change as orbbt. evolves. We will aim to communicate meaningful changes clearly.
+            Features, plans, and availability may change as orbbt evolves. We will aim to communicate meaningful changes clearly.
           </p>
         </div>
       </AnimationContainer>

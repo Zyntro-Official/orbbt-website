@@ -5,12 +5,6 @@ Features
 "use client"
 
 // Imports
-import {
-    BarChart3,
-    Building2,
-    CalendarCheck,
-    Users,
-} from "lucide-react"
 import Image from "next/image"
 
 // UI Components
@@ -18,81 +12,8 @@ import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid"
 
-// Constants — Bento Card Data
-const FEATURES = [
-  {
-    Icon: BarChart3,
-    name: "Track every role",
-    description:
-      "See your entire pipeline at a glance — applied, interviewing, offer, and everything in between.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt="App screenshot"
-        width={800}
-        height={450}
-        className="absolute top-0 right-0 w-3/4 h-1/2 object-cover object-left-top rounded-bl-xl transition-all duration-300 ease-out group-hover:scale-105 [mask-image:linear-gradient(to_bottom,#000_60%,transparent_100%)]"
-      />
-    ),
-  },
-  {
-    Icon: Building2,
-    name: "Research companies",
-    description:
-      "AI-powered company insights — culture, news, funding, and key people — before you hit apply.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (
-      <Image
-        src="/image.png"
-        alt="App screenshot"
-        width={800}
-        height={450}
-        className="absolute top-0 right-0 w-3/4 h-1/2 object-cover object-right-top rounded-bl-xl transition-all duration-300 ease-out group-hover:scale-105 [mask-image:linear-gradient(to_bottom,#000_60%,transparent_100%)]"
-      />
-    ),
-  },
-  {
-    Icon: CalendarCheck,
-    name: "Never miss a deadline",
-    description:
-      "Set follow-up reminders and get notified before opportunities slip away.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (
-      <Image
-        src="/image.png"
-        alt="App screenshot"
-        width={800}
-        height={450}
-        className="absolute top-0 right-0 w-3/4 h-1/2 object-cover object-center rounded-bl-xl transition-all duration-300 ease-out group-hover:scale-105 [mask-image:linear-gradient(to_bottom,#000_60%,transparent_100%)]"
-      />
-    ),
-  },
-  {
-    Icon: Users,
-    name: "Manage contacts",
-    description:
-      "Keep recruiters, hiring managers, and referrals organized in one place.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <Image
-        src="/image.png"
-        alt="App screenshot"
-        width={800}
-        height={450}
-        className="absolute top-0 right-0 w-3/4 h-1/2 object-cover object-right-bottom rounded-bl-xl transition-all duration-300 ease-out group-hover:scale-105 [mask-image:linear-gradient(to_bottom,#000_60%,transparent_100%)]"
-      />
-    ),
-  },
-]
+// Data
+import { FEATURES } from "./features-data"
 
 export default function FeaturesPage() {
   return (
@@ -112,15 +33,31 @@ export default function FeaturesPage() {
           </span>
           </h2>
           <p className="mt-4 text-center text-lg text-muted-foreground max-w-lg">
-            orbbt. gives you the tools to organize, research, and follow up —
+            orbbt gives you the tools to organize, research, and follow up —
             all from one calm place.
           </p>
         </div>
 
         {/* Bento Grid */}
         <BentoGrid className="py-8">
-          {FEATURES.map((feature, idx) => (
-            <BentoCard key={idx} {...feature} />
+          {FEATURES.map((feature) => (
+            <BentoCard
+              key={feature.slug}
+              name={feature.name}
+              description={feature.description}
+              href={`/features/${feature.slug}`}
+              cta={feature.cta}
+              className={feature.className}
+              background={
+                <Image
+                  src={feature.imageSrc}
+                  alt={feature.imageAlt}
+                  width={800}
+                  height={450}
+                  className={feature.imageClassName}
+                />
+              }
+            />
           ))}
         </BentoGrid>
       </AnimationContainer>
