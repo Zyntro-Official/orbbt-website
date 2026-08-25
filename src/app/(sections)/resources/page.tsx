@@ -42,7 +42,7 @@ const RESOURCE_CATEGORIES = [
 
 export default function ResourcesPage() {
   return (
-    <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28">
+    <section className="relative pt-24 pb-20 lg:pb-28">
       {/* Ambient Glow */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#571FFF]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 

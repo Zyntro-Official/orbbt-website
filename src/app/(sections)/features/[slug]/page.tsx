@@ -44,7 +44,7 @@ export default async function FeatureDetailPage({
   }
 
   return (
-    <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28">
+    <section className="relative pt-24 pb-20 lg:pb-28">
       <AnimationContainer className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col items-center justify-center w-full pb-12 text-center">
