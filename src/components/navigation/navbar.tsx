@@ -66,28 +66,21 @@ export function Navbar() {
         {/* Center: Desktop Nav Links */}
         <nav className="hidden items-center gap-1 md:flex">
           <Link
-            href="#features"
+            href="/#features"
             className={cn(navigationMenuTriggerStyle(), "text-muted-foreground hover:text-foreground")}
           >
             Features
           </Link>
           
           <Link
-            href="#pricing"
+            href="/#pricing"
             className={cn(navigationMenuTriggerStyle(), "text-muted-foreground hover:text-foreground")}
           >
             Pricing
           </Link>
 
           <Link
-            href="#contact"
-            className={cn(navigationMenuTriggerStyle(), "text-muted-foreground hover:text-foreground")}
-          >
-            Contact
-          </Link>
-
-          <Link
-            href="#waitlist"
+            href="/#waitlist"
             className={cn(
               navigationMenuTriggerStyle(),
               "inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
@@ -108,7 +101,7 @@ export function Navbar() {
                   Policies
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[320px] gap-2 p-3 md:w-[380px]">
+                  <ul className="grid w-[320px] gap-2 p-3 md:w-95">
                     {policyItems.map((item) => {
                       const Icon = item.icon
                       return (
@@ -166,7 +159,7 @@ export function Navbar() {
             </SheetTrigger>
 
             {/* Mobile Sheet Drawer */}
-            <SheetContent side="right" className="w-[300px] sm:w-[350px]">
+            <SheetContent side="right" className="w-75 sm:w-87.5">
               <SheetHeader>
                 <SheetTitle>
                   <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2.5">
@@ -191,7 +184,7 @@ export function Navbar() {
 
               <nav className="flex flex-col space-y-4 px-6 pt-2">
                 <Link
-                  href="#features"
+                  href="/#features"
                   onClick={() => setIsOpen(false)}
                   className="text-base font-medium text-foreground transition-colors hover:text-primary"
                 >
@@ -199,7 +192,7 @@ export function Navbar() {
                 </Link>
 
                 <Link
-                  href="#pricing"
+                  href="/#pricing"
                   onClick={() => setIsOpen(false)}
                   className="text-base font-medium text-foreground transition-colors hover:text-primary"
                 >
@@ -207,15 +200,7 @@ export function Navbar() {
                 </Link>
 
                 <Link
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="text-base font-medium text-foreground transition-colors hover:text-primary"
-                >
-                  Contact
-                </Link>
-
-                <Link
-                  href="#waitlist"
+                  href="/#waitlist"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-between text-base font-medium text-foreground transition-colors hover:text-primary"
                 >

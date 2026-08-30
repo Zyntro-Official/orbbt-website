@@ -17,7 +17,7 @@ import { MagicCard } from "@/components/ui/magic-card"
 export default function MobileWaitlistPage() {
   return (
     <section
-      id="mobile"
+      id="waitlist"
       className="relative py-20 overflow-hidden"
     >
       {/* Ambient Glow */}

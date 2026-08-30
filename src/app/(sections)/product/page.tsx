@@ -14,20 +14,34 @@ import { AppBadge } from "@/components/ui/app-badge"
 // Constants
 const SHOWCASE = [
   {
-    title: "Dashboard",
-    copy: "One view of everything in flight — activity, upcoming interviews, and what needs a nudge.",
+    title: "Companies",
+    subtitle: "Target the right teams",
+    image: "/features/companies.png",
+    copy: "Track target companies, their hiring signals, and where you stand with each team.Track target companies, their hiring signals, and where you stand with each team.",
   },
   {
-    title: "Analytics",
-    copy: "See where applications stall so you can fix the step that is actually costing you offers.",
+    title: "Contacts",
+    subtitle: "Never lose a connection",
+    image: "/features/contacts.png",
+    copy: "Keep recruiters, hiring managers, and referrals in one searchable rolodex.",
   },
   {
-    title: "Job pipeline",
+    title: "Job kanban",
+    subtitle: "See your pipeline at a glance",
+    image: "/features/job-kanban.png",
     copy: "Drag roles from saved to applied to interview. Every note and deadline travels with the card.",
   },
   {
-    title: "Resume manager",
-    copy: "Keep versions per role, compare match scores, and always know which file you sent.",
+    title: "Jobs table",
+    subtitle: "Scan everything in one view",
+    image: "/features/jobs-table.png",
+    copy: "Sort and filter every application in a dense, keyboard-friendly table view.",
+  },
+  {
+    title: "Job tracking",
+    subtitle: "Every opportunity, one timeline",
+    image: "/features/jobtracking.png",
+    copy: "See where applications stall so you can fix the step that is actually costing you offers.",
   },
 ]
 
@@ -41,9 +55,9 @@ export default function ProductPage() {
           <AppBadge className="mb-6">Product</AppBadge>
 
           {/* Title */}
-          <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
+          <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">
             Built to hold{" "}
-            <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               hundreds of applications
             </span>
           </h2>
@@ -60,9 +74,12 @@ export default function ProductPage() {
             <div key={item.title} className="grid items-center gap-8 lg:grid-cols-12">
               {/* Copy — alternates left/right */}
               <div className={`lg:col-span-4 ${i % 2 ? "lg:order-2" : ""}`}>
-                <h3 className="text-xl font-bold text-foreground">
+                <h3 className="text-2xl font-bold text-foreground">
                   {item.title}
                 </h3>
+                <p className="mt-1 text-sm text-muted-foreground/70">
+                  {item.subtitle}
+                </p>
                 <p className="mt-3 text-sm text-muted-foreground">
                   {item.copy}
                 </p>
@@ -72,11 +89,11 @@ export default function ProductPage() {
               <div className="relative lg:col-span-8 rounded-xl border border-border/60 bg-card p-2 shadow-sm">
                 <div className="relative overflow-hidden rounded-lg bg-muted">
                   <Image
-                    src="/image.png"
+                    src={item.image}
                     alt={item.title}
                     width={1200}
                     height={675}
-                    className="w-full h-auto object-cover rounded-lg"
+                    className="border-2 w-full object-cover rounded-lg"
                   />
                 </div>
               </div>

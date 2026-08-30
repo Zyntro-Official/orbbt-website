@@ -18,7 +18,7 @@ export const AppBadge = ({ icon, children, className }: AppBadgeProps) => {
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary transition-all hover:bg-primary/10",
+        "inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold text-primary transition-all hover:bg-primary/10 cursor-default",
         className,
       )}
     >
