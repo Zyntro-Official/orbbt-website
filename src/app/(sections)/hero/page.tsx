@@ -5,7 +5,7 @@ Hero
 "use client"
 
 // Imports
-import { ArrowRight, Check } from "lucide-react"
+import { ArrowRight, Bell, Briefcase, Building2, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -18,7 +18,7 @@ export default function HeroPage() {
   return (
     <section className="relative overflow-hidden pt-16 pb-20 lg:pt-20 lg:pb-28">
       {/* Ambient Background Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[450px] bg-[#571FFF]/15 blur-[150px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-112.5 bg-[#571FFF]/15 blur-[150px] rounded-full pointer-events-none -z-10" />
 
       <AnimationContainer delay={0.1} className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
 
@@ -31,7 +31,7 @@ export default function HeroPage() {
         <h1 className="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
           Your job hunt,
           <br />
-          <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
             organized.
           </span>
         </h1>
@@ -44,19 +44,19 @@ export default function HeroPage() {
         {/* Core Product Benefits Row */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground">
           <span className="flex items-center gap-1.5">
-            <Check className="h-3.5 w-3.5 text-[#571FFF]" /> Application tracker
+            <Briefcase className="h-3.5 w-3.5 text-[#571FFF]" /> Application tracker
           </span>
           <span className="hidden sm:inline text-border">•</span>
           <span className="flex items-center gap-1.5">
-            <Check className="h-3.5 w-3.5 text-[#571FFF]" /> AI company research
+            <Building2 className="h-3.5 w-3.5 text-[#571FFF]" /> Company Management
           </span>
           <span className="hidden sm:inline text-border">•</span>
           <span className="flex items-center gap-1.5">
-            <Check className="h-3.5 w-3.5 text-[#571FFF]" /> Deadline reminders
+            <Bell className="h-3.5 w-3.5 text-[#571FFF]" /> Deadline reminders
           </span>
           <span className="hidden sm:inline text-border">•</span>
           <span className="flex items-center gap-1.5">
-            <Check className="h-3.5 w-3.5 text-[#571FFF]" /> Contact management
+            <Users className="h-3.5 w-3.5 text-[#571FFF]" /> Contact management
           </span>
         </div>
 
@@ -84,14 +84,14 @@ export default function HeroPage() {
         </div>
 
         {/* Product Note */}
-        <p className="mt-4 text-xs text-muted-foreground/80">
+        <p className="mt-4 text-xs text-gray-800">
           Built by Zyntro for students, graduates, active job seekers, and career switchers.
         </p>
 
         {/* Large Product Screenshot */}
         <div className="relative pt-14 pb-16 md:py-20 px-2 bg-transparent w-full">
           {/* Ambient Glow behind image */}
-          <div className="absolute md:top-[10%] left-1/2 w-3/4 -translate-x-1/2 h-1/4 md:h-1/3 inset-0 blur-[5rem] bg-gradient-to-r from-[#571FFF]/40 via-indigo-500/25 to-[#571FFF]/40" />
+          <div className="absolute md:top-[10%] left-1/2 w-3/4 -translate-x-1/2 h-1/4 md:h-1/3 inset-0 blur-[5rem] bg-linear-to-r from-[#571FFF]/40 via-indigo-500/25 to-[#571FFF]/40" />
 
           {/* Screenshot Container */}
           <div className="relative -m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
@@ -105,7 +105,7 @@ export default function HeroPage() {
               borderWidth={4}
             />
             <Image
-              src="/image.png"
+              src="/image.svg"
               alt="orbbt job application tracker dashboard preview"
               width={1600}
               height={847}
@@ -114,8 +114,8 @@ export default function HeroPage() {
             />
 
             {/* Bottom Gradient Fades */}
-            <div className="absolute -bottom-4 inset-x-0 w-full h-1/2 bg-gradient-to-t from-background z-40" />
-            <div className="absolute bottom-0 md:-bottom-8 inset-x-0 w-full h-1/4 bg-gradient-to-t from-background z-50" />
+            <div className="absolute -bottom-4 inset-x-0 w-full h-1/2 bg-linear-to-t from-background z-40" />
+            <div className="absolute bottom-0 md:-bottom-8 inset-x-0 w-full h-1/4 bg-linear-to-t from-background z-50" />
           </div>
         </div>
 

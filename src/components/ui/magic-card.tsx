@@ -69,9 +69,9 @@ export function MagicCard(props: MagicCardProps) {
   const glowFrom = isOrbMode(props) ? (props.glowFrom ?? "#ee4f27") : "#ee4f27"
   const glowTo = isOrbMode(props) ? (props.glowTo ?? "#6b21ef") : "#6b21ef"
   const glowAngle = isOrbMode(props) ? (props.glowAngle ?? 90) : 90
-  const glowSize = isOrbMode(props) ? (props.glowSize ?? 420) : 420
-  const glowBlur = isOrbMode(props) ? (props.glowBlur ?? 60) : 60
-  const glowOpacity = isOrbMode(props) ? (props.glowOpacity ?? 0.9) : 0.9
+  const glowSize = isOrbMode(props) ? (props.glowSize ?? 320) : 320
+  const glowBlur = isOrbMode(props) ? (props.glowBlur ?? 50) : 50
+  const glowOpacity = isOrbMode(props) ? (props.glowOpacity ?? 0.4) : 0.4
   const { theme, systemTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 

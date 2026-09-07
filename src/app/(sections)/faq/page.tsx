@@ -1,5 +1,5 @@
 /*
-FAQ
+  FAQ
 */
 
 "use client"
@@ -21,7 +21,7 @@ import { AppBadge } from "@/components/ui/app-badge"
 const FAQS = [
   {
     q: "What is orbbt?",
-    a: "A single workspace for your job search: saved jobs, applications, resume versions, interview prep, and follow-ups in one place.",
+    a: "An all-in-one workspace for your job search: saved jobs, contact management, company profiles, deadline reminders, and follow-ups in one place.",
   },
   {
     q: "Can I import jobs I already saved?",
@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "Does the AI apply to jobs for me?",
-    a: "No. It helps you tailor a resume, draft a cover letter, and prepare answers. You stay in control of what gets sent.",
+    a: "No. You stay in control of everything. The AI helps score job compatibility, highlight skill gaps, and track deadlines, while you decide where and what gets submitted.",
   },
   {
     q: "Where does my data live?",
@@ -54,6 +54,7 @@ const FAQS = [
 ]
 
 export default function FaqPage() {
+  // States
   const [open, setOpen] = useState<string>("0")
 
   return (

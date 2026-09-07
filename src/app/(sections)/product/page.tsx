@@ -1,5 +1,5 @@
 /*
-Product
+Product(Replaced with Feature)
 */
 
 "use client"
@@ -15,33 +15,33 @@ import { AppBadge } from "@/components/ui/app-badge"
 const SHOWCASE = [
   {
     title: "Companies",
-    subtitle: "Target the right teams",
+    subtitle: "Every company, one place",
     image: "/features/companies.png",
-    copy: "Track target companies, their hiring signals, and where you stand with each team.Track target companies, their hiring signals, and where you stand with each team.",
+    copy: "Link every job to the company behind it and keep a running list of who you've applied to, saved, or reached out to. No more losing track of which companies you're actually in the running with.",
   },
   {
     title: "Contacts",
-    subtitle: "Never lose a connection",
+    subtitle: "Never lose a recruiter's contact again",
     image: "/features/contacts.png",
-    copy: "Keep recruiters, hiring managers, and referrals in one searchable rolodex.",
+    copy: "Keep every recruiter, hiring manager, and referral in one searchable contact list, linked to the companies and roles they matter for. Turn cold applications into warm introductions with a job search CRM built for networking.",
   },
   {
-    title: "Job kanban",
-    subtitle: "See your pipeline at a glance",
+    title: "Job Kanban",
+    subtitle: "Visualize your job search pipeline",
     image: "/features/job-kanban.png",
-    copy: "Drag roles from saved to applied to interview. Every note and deadline travels with the card.",
+    copy: "Drag applications from Saved to Applied to Interviewing to Offer on a kanban board built for job hunting. Every note and deadline travels with the card, so your pipeline never gets buried in a spreadsheet.",
   },
   {
-    title: "Jobs table",
-    subtitle: "Scan everything in one view",
+    title: "Jobs Table",
+    subtitle: "Built for a hundred applications, not ten",
     image: "/features/jobs-table.png",
-    copy: "Sort and filter every application in a dense, keyboard-friendly table view.",
+    copy: "Sort, filter, and search every job application in a dense, keyboard-friendly table. Compare company, role, status, salary, and location side by side, the way a spreadsheet works, minus the spreadsheet.",
   },
   {
-    title: "Job tracking",
-    subtitle: "Every opportunity, one timeline",
+    title: "Job Tracking",
+    subtitle: "Know what needs your attention today",
     image: "/features/jobtracking.png",
-    copy: "See where applications stall so you can fix the step that is actually costing you offers.",
+    copy: "Every application shows its status and its deadline in one place. Get an email and push notification before a deadline hits, so nothing expires while you're not looking. Sort by date to see what's due next and what needs a follow-up.",
   },
 ]
 
@@ -52,7 +52,7 @@ export default function ProductPage() {
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center w-full py-8">
           {/* Eyebrow Badge */}
-          <AppBadge className="mb-6">Product</AppBadge>
+          <AppBadge className="mb-6">Product Features</AppBadge>
 
           {/* Title */}
           <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">

@@ -37,7 +37,7 @@ export default function ProductShowcasePage() {
 
       {/* Macbook Scroll */}
       <MacbookScroll
-        src="/image.png"
+        src="/image.svg"
         showGradient={false}
       />
     </section>

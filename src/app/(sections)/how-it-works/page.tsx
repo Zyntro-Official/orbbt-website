@@ -5,7 +5,7 @@ How It Works
 "use client"
 
 // Imports
-import { KanbanSquare, Search, Sparkles, Trophy } from "lucide-react"
+import { Bell, Bookmark, KanbanSquare, Users } from "lucide-react"
 
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
@@ -15,28 +15,32 @@ import { MagicCard } from "@/components/ui/magic-card"
 // Constants
 const STEPS = [
   {
-    icon: Search,
-    title: "Find jobs",
+    icon: Bookmark,
+    step: "Capture",
+    title: "Save any job in one click",
     description:
-      "Save roles from LinkedIn and company websites in one click, with the details intact.",
+      "Use the browser extension on LinkedIn or Indeed. Company, title, salary, and location auto-filled. No copy-pasting into a spreadsheet.",
   },
   {
     icon: KanbanSquare,
-    title: "Organize",
+    step: "Track",
+    title: "See your whole pipeline at a glance",
     description:
-      "Track every application through a Kanban pipeline from saved to offer.",
+      "Every application lands in your Jobs table or Kanban board. Drag a card from Applied to Interviewing to Offer.",
   },
   {
-    icon: Sparkles,
-    title: "Improve",
+    icon: Users,
+    step: "Connect",
+    title: "Build your network around your targets",
     description:
-      "AI helps optimize your resume, draft cover letters, and prepare for interviews.",
+      "Add the companies you're chasing and the people who can get you in. Recruiters, hiring managers, referrals, all linked to the roles they matter for.",
   },
   {
-    icon: Trophy,
-    title: "Get hired",
+    icon: Bell,
+    step: "Stay Ahead",
+    title: "Never miss a deadline or a follow-up",
     description:
-      "Stay on top of follow-ups and deadlines until you sign the offer.",
+      "Every job has a status and a date. Your next move is always one glance away.",
   },
 ]
 
@@ -53,9 +57,9 @@ export default function HowItWorksPage() {
           <AppBadge className="mb-6">How It Works</AppBadge>
 
           {/* Title */}
-          <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
+          <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">
             Four steps,{" "}
-            <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               start to offer
             </span>
           </h2>
@@ -67,27 +71,39 @@ export default function HowItWorksPage() {
         </div>
 
         {/* Steps Grid */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map(({ icon: Icon, title, description }, i) => (
-            <AnimationContainer delay={0.15 * i} key={i}>
-              <MagicCard mode="orb"
-        glowFrom={"#E9D5FF"}
-        glowTo={"#FBCFE8"} className="rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md">
-                {/* Header Row — icon + step number */}
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+          {STEPS.map(({ icon: Icon, step, title, description }, i) => (
+            <AnimationContainer delay={0.15 * i} key={i} className="h-full">
+              <MagicCard
+                mode="orb"
+                glowFrom={"#E9D5FF"}
+                glowTo={"#FBCFE8"}
+                glowOpacity={0.3}
+                glowSize={300}
+                className="flex flex-col h-full rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md"
+              >
+                {/* Header Row — icon + step number badge */}
                 <div className="flex items-center justify-between">
                   <span className="flex size-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
                     <Icon className="size-4" />
                   </span>
-                  <span className="font-mono text-sm font-semibold text-muted-foreground">
-                    {String(i + 1).padStart(2, "0")}
+                  <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-2.5 py-0.5 text-xs font-semibold text-primary">
+                    Step #{i + 1}
                   </span>
                 </div>
 
+                {/* Step Tag */}
+                <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-primary">
+                  {step}
+                </p>
+
                 {/* Title */}
-                <p className="mt-4 text-lg font-bold text-foreground">{title}</p>
+                <p className="mt-1 text-lg font-bold text-foreground">{title}</p>
 
                 {/* Description */}
-                <p className="mt-2 text-sm text-muted-foreground">{description}</p>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
               </MagicCard>
             </AnimationContainer>
           ))}

@@ -19,9 +19,9 @@ const PAIN_POINTS = [
       "Excel sheets you update once a week and forget to reopen.",
   },
   {
-    title: "Disorganized notes",
+    title: "Forgotten contacts",
     description:
-      "Notion pages and docs you can never find again.",
+      "Recruiter emails and LinkedIn DMs buried in threads you'll never find again.",
   },
   {
     title: "Lost applications",
@@ -29,9 +29,9 @@ const PAIN_POINTS = [
       "Saved jobs and bookmarks that expire before you revisit them.",
   },
   {
-    title: "Resume chaos",
+    title: "Missed deadlines",
     description:
-      "resume_final_v7_REAL_v2.pdf and nineteen other versions.",
+      "Interview dates and follow-ups you only remember after they've passed.",
   },
 ]
 
@@ -51,9 +51,9 @@ export default function ProblemPage() {
           <AppBadge className="mb-6">The Problem</AppBadge>
 
           {/* Title */}
-          <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
+          <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">
             Your job search is spread{" "}
-            <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               across six different tools
             </span>
           </h2>
@@ -65,7 +65,7 @@ export default function ProblemPage() {
         </div>
 
         {/* Pain Points Grid */}
-        <div className="mx-auto mt-4 grid max-w-4xl gap-4 sm:grid-cols-2">
+        <div className="mx-auto mt-4 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-2">
           {PAIN_POINTS.map((point, idx) => (
             <AnimationContainer
               key={point.title}

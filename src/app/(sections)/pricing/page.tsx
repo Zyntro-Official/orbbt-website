@@ -1,5 +1,5 @@
 /*
-Pricing
+  Pricing
 */
 
 "use client"
@@ -45,35 +45,42 @@ interface Feature {
 const PLANS = [
   {
     name: "Free",
-    info: "For getting organized.",
+    info: "Essential tools for your job hunt.",
     price: { monthly: 0, yearly: 0 },
     features: [
-      { text: "Up to 25 tracked applications" },
-      { text: "Kanban pipeline" },
-      { text: "Browser extension" },
-      { text: "1 resume version" },
+      { text: "Unlimited job tracking" },
+      {
+        text: "Table & Kanban board views",
+        tooltip: "Switch between spreadsheet table and visual pipeline.",
+      },
+      { text: "Company directory & profiles" },
+      {
+        text: "Contacts linked to jobs",
+        tooltip: "Store recruiters and hiring managers with each role.",
+      },
+      {
+        text: "Browser extension",
+        tooltip: "1-click save from LinkedIn & Indeed.",
+      },
+      { text: "Mobile app (iOS & Android)" },
     ] as Feature[],
     btn: { text: "Get started", href: "#waitlist" },
     featured: false,
   },
   {
     name: "Pro",
-    info: "For an active search.",
+    info: "AI-powered tools for a smarter job hunt.",
     price: { monthly: 12, yearly: 126 },
     features: [
-      { text: "Unlimited applications" },
+      { text: "Everything in Free, plus:" },
       {
-        text: "AI resume tailoring & cover letters",
+        text: "Unlimited AI Job Match",
         tooltip:
-          "Rewrite bullets and generate first drafts based on your experience.",
+          "Instant fit scoring and skill gap analysis for any job listing.",
       },
-      {
-        text: "Interview prep & follow-up drafts",
-        tooltip:
-          "Role-specific questions and polite nudges after each stage.",
-      },
-      { text: "Analytics and funnel insights" },
-      { text: "Unlimited resume versions" },
+      { text: "Deadline reminders (Email & Push)" },
+      { text: "Priority feature updates" },
+      { text: "Priority support" },
     ] as Feature[],
     btn: { text: "Join waitlist", href: "#waitlist" },
     featured: true,
@@ -94,7 +101,7 @@ export default function PricingPage() {
         <AnimationContainer delay={0.1}>
           <div className="flex flex-col items-center justify-center w-full py-8">
             {/* Eyebrow Badge */}
-            <AppBadge className="mb-6">Simple Pricing</AppBadge>
+            <AppBadge className="mb-6">Pricing</AppBadge>
 
             {/* Title */}
             <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
@@ -119,17 +126,17 @@ export default function PricingPage() {
             className="w-full flex flex-col items-center justify-center"
           >
             {/* Monthly / Yearly Toggle */}
-            <TabsList>
+            <TabsList className="rounded-full">
               <MotionTabTrigger
                 value="monthly"
                 onClick={() => setActiveTab("monthly")}
-                className="relative"
+                className="relative rounded-full data-[state=active]:bg-transparent data-[state=active]:shadow-none"
               >
                 {activeTab === "monthly" && (
                   <motion.div
                     layoutId="pricing-tab-indicator"
                     transition={{ type: "spring", bounce: 0.5 }}
-                    className="absolute top-0 left-0 w-full h-full bg-background shadow-sm rounded-md z-10"
+                    className="absolute inset-0 bg-background shadow-sm rounded-full z-10"
                   />
                 )}
                 <span className="z-20">Monthly</span>
@@ -137,13 +144,13 @@ export default function PricingPage() {
               <MotionTabTrigger
                 value="yearly"
                 onClick={() => setActiveTab("yearly")}
-                className="relative"
+                className="relative rounded-full data-[state=active]:bg-transparent data-[state=active]:shadow-none"
               >
                 {activeTab === "yearly" && (
                   <motion.div
                     layoutId="pricing-tab-indicator"
                     transition={{ type: "spring", bounce: 0.5 }}
-                    className="absolute top-0 left-0 w-full h-full bg-background shadow-sm rounded-md z-10"
+                    className="absolute inset-0 bg-background shadow-sm rounded-full z-10"
                   />
                 )}
                 <span className="z-20">Yearly</span>
@@ -161,40 +168,66 @@ export default function PricingPage() {
                   <div key={plan.name} className="relative flex flex-col">
                     {/* Most Popular Badge */}
                     {plan.featured && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#571FFF] px-3 py-0.5 text-xs font-semibold text-white z-10">
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full bg-[#571FFF] px-3 py-0.5 text-xs font-semibold text-white z-10">
                         Most popular
                       </div>
                     )}
 
                     <Card
                       className={cn(
-                        "flex flex-col w-full border-border rounded-xl h-full pt-0",
+                        "flex flex-col w-full border-border rounded-2xl h-full pt-0",
                         plan.featured && "border-2 border-[#571FFF]",
                       )}
                     >
                       <CardHeader
                         className={cn(
-                          "border-b border-border",
+                          "relative overflow-hidden border-b border-border pt-8",
                           plan.featured
-                            ? "bg-[#571FFF]/[0.07]"
-                            : "bg-foreground/[0.03]",
-                          plan.featured ? "pt-8" : "pt-(--card-spacing)",
+                            ? "bg-cover bg-center"
+                            : "bg-foreground/3",
                         )}
+                        style={
+                          plan.featured
+                            ? { backgroundImage: "url('/pro-bg.jpg')" }
+                            : undefined
+                        }
                       >
+                        {plan.featured && (
+                          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+                        )}
                         <CardTitle
                           className={cn(
+                            "relative z-10 text-lg font-medium",
                             plan.featured
-                              ? "text-foreground"
+                              ? "text-white"
                               : "text-muted-foreground",
-                            "text-lg font-medium",
                           )}
                         >
                           {plan.name}
                         </CardTitle>
-                        <CardDescription>{plan.info}</CardDescription>
-                        <h5 className="text-3xl font-semibold flex items-end">
+                        <CardDescription
+                          className={cn(
+                            "relative z-10",
+                            plan.featured ? "text-white/80" : "",
+                          )}
+                        >
+                          {plan.info}
+                        </CardDescription>
+                        <h5
+                          className={cn(
+                            "relative z-10 text-3xl font-semibold flex items-end",
+                            plan.featured && "text-white",
+                          )}
+                        >
                           ${plan.price[period]}
-                          <div className="text-base text-muted-foreground font-normal ml-1">
+                          <div
+                            className={cn(
+                              "text-base font-normal ml-1",
+                              plan.featured
+                                ? "text-white/70"
+                                : "text-muted-foreground",
+                            )}
+                          >
                             {plan.name !== "Free"
                               ? `/${period === "monthly" ? "month" : "year"}`
                               : ""}

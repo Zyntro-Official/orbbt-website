@@ -18,7 +18,7 @@ export default function MobileWaitlistPage() {
   return (
     <section
       id="waitlist"
-      className="relative py-20 overflow-hidden"
+      className="relative pt-20 pb-28 overflow-hidden"
     >
       {/* Ambient Glow */}
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[400px] bg-[#571FFF]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
@@ -138,7 +138,7 @@ export default function MobileWaitlistPage() {
           <div className="relative hidden lg:flex justify-center">
             <div className="w-full max-w-[320px]">
               <Iphone
-                src="/image.png"
+                src="/image.svg"
                 className="w-full drop-shadow-[0_35px_70px_rgba(87,31,255,0.25)]"
               />
             </div>

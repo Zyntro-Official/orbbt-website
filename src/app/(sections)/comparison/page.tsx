@@ -20,9 +20,9 @@ const OLD_WAY = [
       "Applications sit across tabs, emails, notes, job boards, and spreadsheets.",
   },
   {
-    title: "Research gets repeated",
+    title: "Company details get lost",
     description:
-      "You search the same company context again before every application or interview.",
+      "You lose track of which companies you've already applied to or reached out to, and end up duplicating effort.",
   },
   {
     title: "Deadlines rely on memory",
@@ -44,9 +44,9 @@ const ORBBT_WAY = [
       "Track jobs, statuses, links, notes, salaries, deadlines, and next steps in one place.",
   },
   {
-    title: "Company context is ready",
+    title: "Every company in one place",
     description:
-      "Use AI company research to understand what matters before you apply or interview.",
+      "See every company you've applied to, saved, or reached out to, without digging through old emails and tabs.",
   },
   {
     title: "Follow-ups stay visible",
@@ -54,9 +54,9 @@ const ORBBT_WAY = [
       "Deadline reminders help you know what needs attention before momentum fades.",
   },
   {
-    title: "Relationships stay organized",
+    title: "Your network is your net worth",
     description:
-      "Keep contact notes connected to companies and roles because a good resume is not the whole process.",
+      "Keep contacts linked to the companies and roles you're chasing. Applications open doors, but the right connection is what gets you through them.",
   },
 ]
 
