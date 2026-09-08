@@ -47,7 +47,7 @@ const SHOWCASE = [
 
 export default function ProductPage() {
   return (
-    <section id="product" className="py-20 bg-muted/40 border-y border-border/50">
+    <section id="features" className="py-20 bg-muted/40 border-y border-border/50">
       <AnimationContainer delay={0.1} className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center w-full py-8">

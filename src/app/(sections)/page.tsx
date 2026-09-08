@@ -20,11 +20,11 @@ export default function SectionsPage() {
       {/* <FeaturesPage /> */}
       {/* <ProductShowcasePage /> */}
       <ProductPage />
-      <MobileWaitlistPage />
       <ProblemPage />
       <HowItWorksPage />
       <ComparisonPage />
       <PricingPage />
+      <MobileWaitlistPage />
       <FaqPage />
       <FinalCtaPage />
     </>
