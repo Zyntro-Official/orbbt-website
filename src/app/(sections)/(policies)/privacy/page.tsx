@@ -230,8 +230,7 @@ export default function PrivacyPage() {
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            If you purchase an Orbbt Premium subscription, payment processing
-            is handled by Paddle, our third-party payment processor. Orbbt does
+            If you purchase an Orbbt Pro subscription, Payments and subscription billing are handled by Paddle, which acts as the Merchant of Record for purchases of Orbbt Pro. Orbbt does
             not directly collect or store your full payment card number or
             payment credentials.
           </p>

@@ -38,7 +38,7 @@ export default function HeroPage() {
 
         {/* Lead Subtitle */}
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl leading-relaxed">
-          Track applications, research companies, remember deadlines, and follow up from one calm place.
+          Track applications, manage companies, remember deadlines, and follow up from one calm place.
         </p>
 
         {/* Core Product Benefits Row */}
