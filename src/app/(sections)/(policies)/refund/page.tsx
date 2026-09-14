@@ -52,7 +52,7 @@ export default function RefundPage() {
             General Policy
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Premium subscriptions are billed on a recurring basis (monthly or annually) through our payment processor, Paddle. Subscription fees are generally non-refundable, except as described below or where required by applicable law.
+            Premium subscriptions are billed on a recurring basis (monthly or annually) through our third-party payment provider. Subscription fees are generally non-refundable, except as described below or where required by applicable law.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
@@ -73,7 +73,7 @@ export default function RefundPage() {
             How Refunds Are Processed
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Approved refunds are issued to the original payment method via Paddle. Processing times may vary depending on your bank or card provider, but typically take 5–10 business days to appear once approved.
+            Approved refunds are issued to the original payment method via the third-party payment provider. Processing times may vary depending on your bank or card provider, but typically take 5–10 business days to appear once approved.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">

@@ -72,7 +72,7 @@ export default function TermsPage() {
             Payments and Billing
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Premium subscriptions are billed on a recurring basis (monthly or annually) and are processed securely through Paddle, our third-party payment processor; Orbbt does not directly store your full payment card details. Subscriptions automatically renew unless canceled before the next renewal date.
+            Premium subscriptions are billed on a recurring basis (monthly or annually) and are processed securely through third-party payment provider, our third-party payment processor; Orbbt does not directly store your full payment card details. Subscriptions automatically renew unless canceled before the next renewal date.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Refunds are handled as described in our separate{" "}
@@ -111,7 +111,7 @@ export default function TermsPage() {
             Third-Party Services
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            The Services rely on certain third-party providers, including but not limited to Google (for sign-in), Supabase (for data storage), and Paddle (for payment processing). Your use of these integrations is also subject to the respective third party’s own terms and privacy practices.
+            The Services rely on certain third-party providers, including but not limited to Google (for sign-in), Supabase (for data storage), and third-party payment provider (for payment processing). Your use of these integrations is also subject to the respective third party’s own terms and privacy practices.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">

@@ -230,13 +230,13 @@ export default function PrivacyPage() {
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            If you purchase an Orbbt Pro subscription, Payments and subscription billing are handled by Paddle, which acts as the Merchant of Record for purchases of Orbbt Pro. Orbbt does
+            If you purchase an Orbbt Pro subscription, Payments and subscription billing are handled by third-party payment provider, which acts as the Merchant of Record for purchases of Orbbt Pro. Orbbt does
             not directly collect or store your full payment card number or
             payment credentials.
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            We may receive information from Paddle related to your purchase,
+            We may receive information from third-party payment provider related to your purchase,
             such as subscription status, transaction identifiers, billing
             status, plan information, and other information required to manage
             your subscription.
@@ -329,7 +329,7 @@ export default function PrivacyPage() {
             </li>
 
             <li>
-              <strong className="text-foreground">Paddle</strong> — payment,
+              <strong className="text-foreground">Third-Party Payment Provider</strong> — payment,
               billing, subscription, tax, and transaction processing.
             </li>
           </ul>
