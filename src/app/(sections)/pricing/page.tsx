@@ -63,6 +63,10 @@ const PLANS = [
         tooltip: "1-click save from LinkedIn & Indeed.",
       },
       { text: "Mobile app (iOS & Android)" },
+      {
+        text: "Mobile push deadline reminders",
+        tooltip: "Get a notification reminder 2 days before a saved job deadline.",
+      },
     ] as Feature[],
     btn: { text: "Get started", href: "#waitlist" },
     featured: false,
@@ -78,7 +82,11 @@ const PLANS = [
         tooltip:
           "Instant fit scoring and skill gap analysis for any job listing.",
       },
-      { text: "Deadline reminders (Email & Push)" },
+      {
+        text: "Custom deadline reminders + email alerts",
+        tooltip:
+          "Choose up to 5 reminder days and your preferred reminder time, with email reminders included.",
+      },
       { text: "Priority feature updates" },
       { text: "Priority support" },
     ] as Feature[],

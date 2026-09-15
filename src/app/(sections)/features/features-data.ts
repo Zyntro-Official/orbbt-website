@@ -44,7 +44,7 @@ export const FEATURES: Feature[] = [
     slug: "deadline-reminder",
     name: "Deadline Reminder",
     description:
-      "Set follow-ups and get timely nudges so interviews, thank-you notes, and decisions never slip away.",
+      "Get timely alerts before the deadline of your saved jobs, with mobile notifications and email reminders plus customizable schedules.",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     imageSrc: "/image.svg",
