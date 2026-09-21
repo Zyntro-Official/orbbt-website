@@ -41,6 +41,7 @@ interface Feature {
   tooltip?: string
 }
 
+
 // Constants
 const PLANS = [
   {
@@ -68,13 +69,19 @@ const PLANS = [
         tooltip: "Get a notification reminder 2 days before a saved job deadline.",
       },
     ] as Feature[],
-    btn: { text: "Get started", href: "#waitlist" },
+    btn: {
+      text: "Get started",
+      href: {
+        monthly: "https://web.orbbt.app/signup",
+        yearly: "https://web.orbbt.app/signup",
+      },
+    },
     featured: false,
   },
   {
     name: "Pro",
     info: "AI-powered tools for a smarter job hunt.",
-    price: { monthly: 12, yearly: 126 },
+    price: { monthly: 7.99, yearly: 59.99 },
     features: [
       { text: "Everything in Free, plus:" },
       {
@@ -90,7 +97,13 @@ const PLANS = [
       { text: "Priority feature updates" },
       { text: "Priority support" },
     ] as Feature[],
-    btn: { text: "Join waitlist", href: "#waitlist" },
+    btn: {
+      text: "Upgrade to Pro",
+      href: {
+        monthly: "https://web.orbbt.app/upgrade?plan=monthly",
+        yearly: "https://web.orbbt.app/upgrade?plan=annual",
+      },
+    },
     featured: true,
   },
 ]
@@ -251,7 +264,7 @@ export default function PricingPage() {
                               }}
                               className="px-2 py-0.5 ml-2 rounded-md bg-[#571FFF] text-white text-sm font-medium"
                             >
-                              -12%
+                              Save 37%
                             </motion.span>
                           )}
                         </h5>
@@ -290,7 +303,7 @@ export default function PricingPage() {
 
                       <CardFooter className="w-full pt-0">
                         <Link
-                          href={plan.btn.href}
+                          href={plan.btn.href[period]}
                           className={buttonVariants({
                             className: cn(
                               "w-full",
