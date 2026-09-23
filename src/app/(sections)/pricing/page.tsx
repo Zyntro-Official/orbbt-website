@@ -65,6 +65,10 @@ const PLANS = [
       },
       { text: "Mobile app (iOS & Android)" },
       {
+        text: "3 free AI Resume Job Matches",
+        tooltip: "Three successful analyses per account, available at any time. They do not renew monthly.",
+      },
+      {
         text: "Mobile push deadline reminders",
         tooltip: "Get a notification reminder 2 days before a saved job deadline.",
       },
@@ -85,9 +89,9 @@ const PLANS = [
     features: [
       { text: "Everything in Free, plus:" },
       {
-        text: "Unlimited AI Job Match",
+        text: "30 AI Resume Job Matches each month",
         tooltip:
-          "Instant fit scoring and skill gap analysis for any job listing.",
+          "Thirty successful analyses each subscription month, for both monthly and annual subscribers.",
       },
       {
         text: "Custom deadline reminders + email alerts",
