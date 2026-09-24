@@ -34,14 +34,15 @@ export default function RefundPage() {
 
           {/* Last Updated */}
           <p className="mt-4 text-center text-sm text-muted-foreground">
-            Last Updated: August 24, 2026
+            Last Updated: September 24, 2026
           </p>
         </div>
 
         {/* Content */}
         <div className="space-y-6">
           <p className="text-muted-foreground leading-relaxed">
-            This Refund Policy applies to Premium subscriptions purchased through Orbbt (“Orbbt,” “we,” “us,” or “our”). It should be read together with our{" "}
+            This Refund Policy applies to Orbbt Pro subscriptions purchased
+            through Lemon Squeezy. It should be read together with our{" "}
             <Link href="/terms" className="text-primary underline">
               Terms and Conditions
             </Link>
@@ -52,14 +53,21 @@ export default function RefundPage() {
             General Policy
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Premium subscriptions are billed on a recurring basis (monthly or annually) through our third-party payment provider. Subscription fees are generally non-refundable, except as described below or where required by applicable law.
+            Orbbt Pro is billed monthly or annually through Lemon Squeezy,
+            the merchant of record. Refunds are available under the policy
+            below and where required by applicable law.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
             7-Day Window
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            If you are unsatisfied with Premium, or experience technical issues that prevent you from using core features, you may request a refund within 7 days of your initial purchase or of a renewal charge. We review such requests on a case-by-case basis.
+            You may request a refund within seven calendar days of an
+            initial purchase or renewal charge. We review requests
+            individually, considering the reason for the request, usage of
+            the paid features, and any technical problems. A request within
+            seven days is not an automatic refund guarantee. This does not
+            limit any refund or withdrawal rights required by law.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             To request a refund, email{" "}
@@ -73,21 +81,34 @@ export default function RefundPage() {
             How Refunds Are Processed
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Approved refunds are issued to the original payment method via the third-party payment provider. Processing times may vary depending on your bank or card provider, but typically take 5–10 business days to appear once approved.
+            Approved refunds are issued to the original payment method by
+            Lemon Squeezy. Your bank or payment method determines when the
+            credit appears; it may take up to ten business days. Pro access
+            associated with a refunded charge may end when the refund is
+            processed.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
             Cancellations
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            You may cancel your Premium subscription at any time from your Account settings. Cancellation stops future billing but does not automatically trigger a refund for the current billing period — you will retain Premium access until the end of the period you’ve already paid for, unless you separately qualify for a refund under the 7-Day Window section.
+            You may cancel a Pro subscription through Settings → Billing in
+            the web app, which opens the Lemon Squeezy customer portal.
+            Cancellation stops future renewal charges. Unless the charge is
+            refunded, Pro access remains available through the end of the
+            paid billing period. Deleting your Orbbt account does not itself
+            cancel billing, so cancel your subscription before deletion.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
             Non-Refundable Situations
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Refunds are generally not available for requests made more than 7 days after the relevant charge; partial-period cancellations after the 7-day window; accounts terminated for violation of our Terms and Conditions; or charges where the Services were used substantially throughout the billing period, absent a genuine technical issue.
+            After the seven-day window, partial-period cancellations do not
+            ordinarily qualify for a refund. We will review duplicate or
+            unauthorized charges, service failures, and other exceptional
+            circumstances individually. This policy does not limit statutory
+            rights, including any applicable right of withdrawal.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">

@@ -34,7 +34,7 @@ export default function TermsPage() {
 
           {/* Last Updated */}
           <p className="mt-4 text-center text-sm text-muted-foreground">
-            Last Updated: August 24, 2026
+            Last Updated: September 24, 2026
           </p>
         </div>
 
@@ -51,17 +51,24 @@ export default function TermsPage() {
             Description of Services
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Orbbt is a job-search productivity platform that helps you save, organize, and track job opportunities and application statuses across three connected surfaces: a web application, a Chrome extension, and a mobile application. All three are linked to a single Account, and your Job Data is synced across them in near real time.
+            Orbbt is a job-search productivity platform for saving, organizing,
+            and tracking opportunities through a web application, browser
+            extension, and supported mobile applications. Account data can
+            synchronize across the products you use. Features and availability
+            may vary by platform and plan.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
             User Accounts
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Orbbt accounts are created and accessed using Google Sign-In. By signing in, you authorize us to access your basic Google profile information (such as name, email, and profile picture) solely to create and authenticate your Account. Orbbt does not access, read, or store the content of your Gmail messages.
+            You can create an account with email and password or an available
+            third-party sign-in option such as Google. If you choose Google,
+            we receive basic profile information to create and authenticate
+            your account. We do not access your Gmail messages.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            You are responsible for maintaining the security of the Google account used to sign in to Orbbt and for all activity that occurs under your Orbbt Account. Notify us immediately at{" "}
+            You are responsible for protecting your account credentials and for activity under your Orbbt account. Notify us immediately at{" "}
             <a href="mailto:support@orbbt.app" className="text-primary underline">
               support@orbbt.app
             </a>{" "}
@@ -72,7 +79,13 @@ export default function TermsPage() {
             Payments and Billing
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Premium subscriptions are billed on a recurring basis (monthly or annually) and are processed securely through third-party payment provider, our third-party payment processor; Orbbt does not directly store your full payment card details. Subscriptions automatically renew unless canceled before the next renewal date.
+            If you subscribe to Orbbt Pro, the monthly or annual price and
+            billing interval shown at checkout apply. Lemon Squeezy is the
+            merchant of record and handles payment, tax, and billing. A
+            subscription renews automatically unless canceled before its next
+            renewal date. Orbbt does not store your full payment card number.
+            You can manage or cancel your subscription through Settings →
+            Billing and the Lemon Squeezy customer portal.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Refunds are handled as described in our separate{" "}
@@ -86,7 +99,7 @@ export default function TermsPage() {
             Your Data
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Job Data you create in Orbbt (saved jobs, statuses, notes, and similar content) belongs to you. You grant Orbbt a limited license to host, store, sync, and process this data solely to operate and improve the Services, as described in our{" "}
+            Job Data you create in Orbbt (saved jobs, statuses, notes, and similar content) belongs to you. You grant us a limited license to host, store, synchronize, and process this data to deliver the features you request and keep the Services secure, as described in our{" "}
             <Link href="/privacy" className="text-primary underline">
               Privacy Policy
             </Link>
@@ -97,7 +110,7 @@ export default function TermsPage() {
             Intellectual Property
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            All content, features, and functionality of the Services — including the Orbbt name, logo, software, design, and user interface — are the exclusive property of Orbbt and are protected by applicable copyright, trademark, and other intellectual property laws.
+            The Orbbt name, logo, software, design, and user interface are owned by Zyntro or its licensors and protected by applicable intellectual property laws. Your use of the Services does not transfer ownership of them to you.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
@@ -111,7 +124,20 @@ export default function TermsPage() {
             Third-Party Services
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            The Services rely on certain third-party providers, including but not limited to Google (for sign-in), Supabase (for data storage), and third-party payment provider (for payment processing). Your use of these integrations is also subject to the respective third party’s own terms and privacy practices.
+            The Services use third-party providers, including Google for
+            optional sign-in, Supabase for authentication and data storage,
+            and Lemon Squeezy for paid subscriptions. Third-party websites
+            and services may have separate terms and privacy practices.
+          </p>
+
+          <h2 className="text-xl font-semibold text-foreground mt-8">
+            AI Features
+          </h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Resume match scores and recommendations are generated automatically
+            for informational use. They can contain mistakes or omissions and
+            do not guarantee an interview, offer, or employment decision. You
+            should review them before relying on them.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
@@ -125,7 +151,15 @@ export default function TermsPage() {
             Termination
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            We may suspend or terminate your access to the Services at any time, with or without cause or notice, including for violation of these Terms. You may terminate your Account at any time by discontinuing use of the Services and, if applicable, canceling your Premium subscription.
+            We may restrict access where reasonably necessary to address
+            security threats, unlawful use, or violations of these Terms. For
+            other terminations, we will give notice where reasonably possible.
+            You may delete your account in Profile settings on the web or in
+            the Profile tab on mobile. Stopping use alone does not delete
+            your account. Before account deletion, cancel any paid
+            subscription through Settings → Billing; account deletion does
+            not itself request cancellation from Lemon Squeezy. Refunds and
+            mandatory consumer rights remain governed by the Refund Policy.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">
@@ -139,7 +173,9 @@ export default function TermsPage() {
             Governing Law
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            These Terms are governed by the laws of the jurisdiction in which Orbbt operates, without regard to conflict-of-law principles, except where local consumer protection law requires otherwise.
+            These Terms are governed by the laws of Pakistan, except where
+            mandatory consumer protection laws in your place of residence
+            apply.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground mt-8">

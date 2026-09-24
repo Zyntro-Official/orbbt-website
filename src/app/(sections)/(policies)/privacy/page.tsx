@@ -6,6 +6,7 @@ Privacy Policy
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
 import type { Metadata } from "next"
+import Link from "next/link"
 
 // Metadata
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function PrivacyPage() {
           </h1>
 
           <p className="mt-4 text-center text-sm text-muted-foreground">
-            Last Updated: September 7, 2026
+            Last Updated: September 24, 2026
           </p>
         </div>
 
@@ -38,8 +39,8 @@ export default function PrivacyPage() {
         <div className="space-y-6">
           {/* Introduction */}
           <p className="text-muted-foreground leading-relaxed">
-            This Privacy Policy explains how Orbbt (“Orbbt,” “we,” “us,” or
-            “our”) collects, uses, stores, shares, and protects information when
+            Orbbt is operated by Zyntro. This Privacy Policy explains how we
+            collect, uses, stores, shares, and protects information when
             you use our website, web application, browser extension, and mobile
             applications (collectively, the “Services”).
           </p>
@@ -51,8 +52,7 @@ export default function PrivacyPage() {
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            By using the Services, you acknowledge the data practices described
-            in this Privacy Policy.
+            For questions about these practices, contact us at support@orbbt.app.
           </p>
 
           {/* Information We Collect */}
@@ -68,6 +68,8 @@ export default function PrivacyPage() {
             When you create an Orbbt Account, we may collect information such as
             your name, email address, profile picture, account preferences, and
             other information necessary to create and maintain your Account.
+            If you register with email and password, our authentication provider
+            processes your credentials to create and secure your account.
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
@@ -89,14 +91,28 @@ export default function PrivacyPage() {
             “Job Data” may include job applications, job titles, companies,
             application statuses, job descriptions, locations, salaries,
             deadlines, job posting links, notes, professional contacts, company
-            information, resumes, and other job-search information that you
-            choose to store in Orbbt.
+            information, resume files you upload for analysis, analysis results, and other
+            job-search information you choose to provide. Uploaded resume files
+            are processed temporarily; completed analysis results may be saved
+            to your Account.
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
             Job Data may be created through the Orbbt web application, browser
             extension, or mobile application and may be synchronized across
             your devices.
+          </p>
+
+          {/* Early access */}
+          <h3 className="text-lg font-semibold text-foreground mt-6">
+            Early Access and Communications
+          </h3>
+          <p className="text-muted-foreground leading-relaxed">
+            If you request early access or contact us about a waitlist, we may
+            collect the name, email address, and job-search category you
+            provide to respond to your request and send relevant product
+            updates. You can ask us to stop these messages or remove your
+            details by emailing support@orbbt.app.
           </p>
 
           {/* Browser Extension */}
@@ -216,12 +232,14 @@ export default function PrivacyPage() {
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            Information submitted to an AI-powered feature is used to provide
-            the feature requested by you. We do not sell your Job Data or use
-            it for personalized advertising. Where third-party AI processing
-            services are used, information is shared only as necessary to
-            provide the requested AI functionality and is subject to applicable
-            privacy and security safeguards.
+            When you request a resume match, we send the uploaded resume and
+            relevant job details through our analysis infrastructure to a
+            configured third-party AI model provider. We save the resulting
+            match scores and recommendations to your Account. Temporary
+            uploaded files are removed after processing when cleanup succeeds.
+            The AI model provider may handle submitted content under its own
+            applicable terms and retention practices. We do not sell your Job
+            Data or use it for personalized advertising.
           </p>
 
           {/* Payments */}
@@ -230,16 +248,16 @@ export default function PrivacyPage() {
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            If you purchase an Orbbt Pro subscription, Payments and subscription billing are handled by third-party payment provider, which acts as the Merchant of Record for purchases of Orbbt Pro. Orbbt does
-            not directly collect or store your full payment card number or
-            payment credentials.
+            If you purchase an Orbbt Pro subscription, Lemon Squeezy handles
+            checkout, billing, taxes, and refunds as the merchant of record.
+            Orbbt does not directly collect or store your full payment card
+            number or payment credentials.
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            We may receive information from third-party payment provider related to your purchase,
-            such as subscription status, transaction identifiers, billing
-            status, plan information, and other information required to manage
-            your subscription.
+            We receive purchase and subscription information from Lemon
+            Squeezy, such as transaction identifiers, plan, billing status,
+            and subscription status, to manage your access and support requests.
           </p>
 
           {/* How We Use Data */}
@@ -329,8 +347,17 @@ export default function PrivacyPage() {
             </li>
 
             <li>
-              <strong className="text-foreground">Third-Party Payment Provider</strong> — payment,
-              billing, subscription, tax, and transaction processing.
+              <strong className="text-foreground">Lemon Squeezy</strong> —
+              checkout, billing, refunds, taxes, and subscription management.
+            </li>
+            <li>
+              <strong className="text-foreground">Trigger.dev</strong> —
+              background processing for resume analysis and reminders.
+            </li>
+            <li>
+              <strong className="text-foreground">AI model provider</strong> —
+              processes resume text and job details for requested analyses.
+              The provider may change; contact us for the provider currently in use.
             </li>
           </ul>
 
@@ -345,7 +372,9 @@ export default function PrivacyPage() {
             If Orbbt is involved in a merger, acquisition, financing,
             reorganization, or sale of assets, information may be transferred
             as part of that transaction subject to applicable legal
-            requirements.
+            requirements. Any transfer of browser extension user data as part
+            of a merger, acquisition, or asset sale will require your explicit
+            prior consent under the Chrome Web Store Limited Use rules.
           </p>
 
           {/* Data Sync */}
@@ -360,6 +389,18 @@ export default function PrivacyPage() {
             transmitted between your device, Orbbt&apos;s servers, and the
             infrastructure providers necessary to provide the requested
             functionality.
+          </p>
+
+          {/* Cookies */}
+          <h2 className="text-xl font-semibold text-foreground mt-8">
+            Cookies and Device Storage
+          </h2>
+          <p className="text-muted-foreground leading-relaxed">
+            The web application uses cookies or similar browser storage to
+            maintain authentication and preferences. The extension also uses
+            extension storage for authentication and limited display data, as
+            described above. You can clear browser storage through your
+            browser settings, although doing so may sign you out.
           </p>
 
           {/* Security */}
@@ -453,8 +494,12 @@ export default function PrivacyPage() {
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            You may request deletion of your Orbbt Account and associated
-            personal information. When an Account is deleted, we will delete or
+            You can delete your Orbbt Account from Profile settings in the
+            web app or from the Profile tab in the mobile app. See our{" "}
+            <Link href="/delete-account" className="text-primary underline">
+              account deletion instructions
+            </Link>
+            . You may also request help by email. When an Account is deleted, we will delete or
             anonymize associated Job Data and personal information from our
             active systems, except for information that we are required or
             permitted to retain for legal, security, fraud-prevention,
@@ -487,7 +532,10 @@ export default function PrivacyPage() {
           <p className="text-muted-foreground leading-relaxed">
             We generally retain your Account information and Job Data for as
             long as your Account remains active or as necessary to provide the
-            Services.
+            Services. Temporary uploaded resume files are removed after
+            analysis or failed processing when cleanup succeeds; completed
+            analysis results remain in your Account until you delete them or
+            your Account.
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
@@ -496,6 +544,21 @@ export default function PrivacyPage() {
             shorter or longer periods where reasonably necessary for security,
             fraud prevention, troubleshooting, legal compliance, financial
             obligations, dispute resolution, or enforcement of our agreements.
+          </p>
+
+          {/* Legal grounds */}
+          <h2 className="text-xl font-semibold text-foreground mt-8">
+            Legal Grounds and Additional Rights
+          </h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Where applicable data protection law requires a legal basis, we
+            process account and job data to provide the Services you request;
+            security and diagnostic data to protect and maintain the Services;
+            billing data to meet contractual and legal obligations; and
+            optional communications and notifications according to your
+            choices. Depending on your location, you may withdraw consent for
+            optional processing and lodge a complaint with your data
+            protection authority.
           </p>
 
           {/* Children */}
