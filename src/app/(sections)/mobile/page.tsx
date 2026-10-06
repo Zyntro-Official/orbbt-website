@@ -1,11 +1,8 @@
 /*
-Mobile Waitlist
+  Mobile Waitlist
 */
 
 "use client"
-
-// Imports
-import { ChevronDown } from "lucide-react"
 
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
@@ -13,15 +10,22 @@ import { AppBadge } from "@/components/ui/app-badge"
 import { Button } from "@/components/ui/button"
 import { Iphone } from "@/components/ui/iphone"
 import { MagicCard } from "@/components/ui/magic-card"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export default function MobileWaitlistPage() {
   return (
     <section
       id="waitlist"
-      className="relative pt-20 pb-28 overflow-hidden"
+      className="relative pt-20 pb-32 overflow-hidden"
     >
       {/* Ambient Glow */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[400px] bg-[#571FFF]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-125 h-100 bg-[#571FFF]/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <AnimationContainer
         delay={0.1}
@@ -33,9 +37,9 @@ export default function MobileWaitlistPage() {
           <AppBadge className="mb-6">Mobile App</AppBadge>
 
           {/* Title */}
-          <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
+          <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">
             Your job hunt{" "}
-            <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               in your pocket
             </span>
           </h2>
@@ -75,7 +79,7 @@ export default function MobileWaitlistPage() {
                     id="name"
                     type="text"
                     placeholder="Your name"
-                    className="w-full h-11 px-4 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#571FFF]/50 focus:border-[#571FFF] transition-colors"
+                    className="w-full h-11 px-4 rounded-full border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#571FFF]/50 focus:border-[#571FFF] transition-colors"
                   />
                 </div>
 
@@ -91,7 +95,7 @@ export default function MobileWaitlistPage() {
                     id="email"
                     type="email"
                     placeholder="you@email.com"
-                    className="w-full h-11 px-4 rounded-lg border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#571FFF]/50 focus:border-[#571FFF] transition-colors"
+                    className="w-full h-11 px-4 rounded-full border border-border bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#571FFF]/50 focus:border-[#571FFF] transition-colors"
                   />
                 </div>
 
@@ -103,23 +107,18 @@ export default function MobileWaitlistPage() {
                   >
                     What describes you?
                   </label>
-                  <div className="relative">
-                    <select
-                      id="describes"
-                      defaultValue=""
-                      className="w-full h-11 px-4 rounded-lg border border-border bg-background text-sm text-foreground appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#571FFF]/50 focus:border-[#571FFF] transition-colors"
-                    >
-                      <option value="" disabled>
-                        Select an option
-                      </option>
-                      <option value="student">Student</option>
-                      <option value="graduate">Recent graduate</option>
-                      <option value="seeker">Active job seeker</option>
-                      <option value="switcher">Career switcher</option>
-                      <option value="other">Other</option>
-                    </select>
-                    <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
-                  </div>
+                  <Select>
+                    <SelectTrigger id="describes" className="w-full rounded-full">
+                      <SelectValue placeholder="Select an option" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="student">Student</SelectItem>
+                      <SelectItem value="graduate">Recent graduate</SelectItem>
+                      <SelectItem value="seeker">Active job seeker</SelectItem>
+                      <SelectItem value="switcher">Career switcher</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 {/* Submit */}
@@ -139,7 +138,7 @@ export default function MobileWaitlistPage() {
             <div className="w-full max-w-[320px]">
               <Iphone
                 src="/image.svg"
-                className="w-full drop-shadow-[0_35px_70px_rgba(87,31,255,0.25)]"
+                className="w-full drop-shadow-[0_35px_70px_rgba(87,31,255,0.20)]"
               />
             </div>
           </div>

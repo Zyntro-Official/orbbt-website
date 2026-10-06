@@ -2,8 +2,6 @@
 Hero
 */
 
-"use client"
-
 // Imports
 import { ArrowRight, Bell, Briefcase, Building2, Users } from "lucide-react"
 import Image from "next/image"
@@ -77,8 +75,8 @@ export default function HeroPage() {
             asChild
             className="w-full sm:w-auto h-12 px-8 text-base"
           >
-            <Link href="#waitlist">
-              Join mobile app waitlist
+            <Link href="#chrome-extension">
+              Get Chrome Extension
             </Link>
           </Button>
         </div>

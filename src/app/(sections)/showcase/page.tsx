@@ -2,8 +2,6 @@
 Product Showcase
 */
 
-"use client"
-
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"

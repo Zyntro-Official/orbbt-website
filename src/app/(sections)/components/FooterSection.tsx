@@ -18,6 +18,9 @@ export function FooterSection() {
           <Link href="/#features" className="hover:text-foreground transition-colors">
             Features
           </Link>
+          <Link href="/#chrome-extension" className="hover:text-foreground transition-colors">
+            Chrome Extension
+          </Link>
           <Link href="/#pricing" className="hover:text-foreground transition-colors">
             Pricing
           </Link>

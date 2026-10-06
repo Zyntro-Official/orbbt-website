@@ -2,8 +2,6 @@
 Features
 */
 
-"use client"
-
 // Imports
 import Image from "next/image"
 
@@ -26,9 +24,9 @@ export default function FeaturesPage() {
         <div className="flex flex-col items-center justify-center w-full py-8">
           {/* Eyebrow Badge */}
           <AppBadge className="mb-4">Features</AppBadge>
-          <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
+          <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">
             Your job hunt, {" "}
-            <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Supercharged.
           </span>
           </h2>

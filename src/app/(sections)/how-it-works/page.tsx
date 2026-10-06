@@ -2,8 +2,6 @@
 How It Works
 */
 
-"use client"
-
 // Imports
 import { Bell, Bookmark, KanbanSquare, Users } from "lucide-react"
 
@@ -19,7 +17,7 @@ const STEPS = [
     step: "Capture",
     title: "Save any job in one click",
     description:
-      "Use the browser extension on LinkedIn or Indeed. Company, title, salary, and location auto-filled. No copy-pasting into a spreadsheet.",
+      "Use the browser extension on LinkedIn or Indeed. Company, title, salary, and location auto-filled. No copy-pasting into a spreadsheet. Learn more about the Chrome extension below.",
   },
   {
     icon: KanbanSquare,

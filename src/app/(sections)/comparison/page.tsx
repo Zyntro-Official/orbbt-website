@@ -2,8 +2,6 @@
 Before & After
 */
 
-"use client"
-
 // Imports
 import { Check, ThumbsDown, ThumbsUp, X } from "lucide-react"
 

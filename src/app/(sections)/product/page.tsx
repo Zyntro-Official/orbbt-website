@@ -2,8 +2,6 @@
 Product(Replaced with Feature)
 */
 
-"use client"
-
 // Imports
 import Image from "next/image"
 

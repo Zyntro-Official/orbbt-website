@@ -10,9 +10,10 @@ import Link from "next/link"
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Refund Policy — Orbbt",
+  title: "Refund Policy",
   description:
     "How refunds work for Orbbt Pro subscriptions, including the 7-day window, cancellations, and exceptions.",
+  alternates: { canonical: "/refund" },
 }
 
 export default function RefundPage() {

@@ -1,0 +1,26 @@
+# Orbbt — Job Application Tracker
+
+Orbbt is a job hunt organizer for students, graduates, career switchers and active job seekers.
+It provides: job tracking (Kanban board and table), company directory, contact management, deadline reminders, a Chrome browser extension for LinkedIn and Indeed, and AI Resume Job Match.
+
+## Product
+- Web app: https://web.orbbt.app
+- Marketing site: https://orbbt.app
+- Pricing: Free plan (unlimited job tracking) + Pro at $7.99/month or $59.99/year
+- Chrome extension: Google Chrome and Chromium browsers (LinkedIn and Indeed support)
+- Mobile: iOS and Android app
+
+## Features
+- Unlimited job tracking
+- Kanban board and jobs table views
+- Company directory and profiles
+- Contacts linked to jobs (recruiters, hiring managers, referrals)
+- Browser extension for one-click job saving
+- Deadline reminders (push on mobile, email on Pro)
+- AI Resume Job Match (3 free, 30/month on Pro)
+
+## Company
+Built by Zyntro.
+- Website: https://orbbt.app
+- LinkedIn: https://www.linkedin.com/company/orbbt
+- Instagram: https://instagram.com/orbbt

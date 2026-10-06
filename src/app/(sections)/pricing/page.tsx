@@ -39,6 +39,7 @@ type Tab = "monthly" | "yearly"
 interface Feature {
   text: string
   tooltip?: string
+  href?: string
 }
 
 
@@ -61,7 +62,8 @@ const PLANS = [
       },
       {
         text: "Browser extension",
-        tooltip: "1-click save from LinkedIn & Indeed.",
+        tooltip: "Save jobs from LinkedIn & Indeed in one click with the Orbbt Chrome extension.",
+        href: "/#chrome-extension",
       },
       { text: "Mobile app (iOS & Android)" },
       {
@@ -291,7 +293,16 @@ export default function PricingPage() {
                                         "border-b border-dashed border-border cursor-pointer",
                                     )}
                                   >
-                                    {feature.text}
+                                    {feature.href ? (
+                                      <Link
+                                        href={feature.href}
+                                        className="hover:text-primary transition-colors hover:underline"
+                                      >
+                                        {feature.text}
+                                      </Link>
+                                    ) : (
+                                      feature.text
+                                    )}
                                   </p>
                                 </TooltipTrigger>
                                 {feature.tooltip && (

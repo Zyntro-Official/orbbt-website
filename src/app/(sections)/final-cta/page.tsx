@@ -39,7 +39,7 @@ export default function FinalCtaPage() {
               required
               placeholder="you@email.com"
               aria-label="Email address"
-              className="w-full h-11 rounded-xl border border-border bg-card px-4 text-sm outline-none focus:border-[#571FFF] focus:ring-2 focus:ring-[#571FFF]/50 transition-colors"
+              className="w-full h-11 rounded-xl border border-border bg-card px-4 text-sm outline-none focus:ring-2 focus:ring-[#571FFF]/50 transition-colors"
             />
             <Button
               type="submit"

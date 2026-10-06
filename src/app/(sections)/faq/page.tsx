@@ -5,30 +5,29 @@
 "use client"
 
 // Imports
+import { ChevronDown } from "lucide-react"
+import { motion } from "motion/react"
 import { useState } from "react"
 
 // UI Components
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
+import { cn } from "@/lib/utils"
 
 // Types
-type FAQItem = {
-  q: string
-  a: string
-}
+import type { FAQItem } from "@/lib/faqs"
 
-export default function FaqPage({ faqs }: { faqs: FAQItem[] }) {
+export default function FaqPage({ faqs }: { faqs: readonly FAQItem[] }) {
   // States
-  const [open, setOpen] = useState<string>("0")
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
+
+  // Handlers
+  const toggleItem = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index))
+  }
 
   return (
-    <section id="faq" className="py-20">
+    <section id="faq" className="py-20" aria-labelledby="faq-heading">
       <AnimationContainer
         delay={0.1}
         className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
@@ -39,9 +38,12 @@ export default function FaqPage({ faqs }: { faqs: FAQItem[] }) {
           <AppBadge className="mb-6">FAQ</AppBadge>
 
           {/* Title */}
-          <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">
+          <h2
+            id="faq-heading"
+            className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6"
+          >
             Questions,{" "}
-            <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               answered.
             </span>
           </h2>
@@ -52,34 +54,81 @@ export default function FaqPage({ faqs }: { faqs: FAQItem[] }) {
           </p>
         </div>
 
-        {/* Accordion */}
-        <div className="mx-auto max-w-2xl mt-12">
-          <Accordion
-            type="single"
-            collapsible
-            value={open}
-            onValueChange={setOpen}
-            className="space-y-2 border-0 py-2"
-          >
-            {faqs?.map((faq, i) => (
-              <AccordionItem
+        {/* Accordion List */}
+        <div className="mx-auto max-w-2xl mt-12 space-y-3">
+          {faqs?.map((faq, i) => {
+            const isOpen = openIndex === i
+
+            return (
+              <motion.div
                 key={i}
-                value={String(i)}
-                className="border border-border/60 rounded-xl px-5 data-[state=open]:border-[#571FFF]/60 [state=open]:border-4 transition-colors"
+                initial={false}
+                animate={{
+                  borderColor: isOpen
+                    ? "rgba(87, 31, 255, 0.6)"
+                    : "rgba(128, 128, 128, 0.2)",
+                  backgroundColor: isOpen
+                    ? "rgba(87, 31, 255, 0.02)"
+                    : "rgba(87, 31, 255, 0)",
+                }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className={cn(
+                  "border rounded-xl px-5 transition-shadow",
+                  isOpen && "shadow-sm shadow-[#571FFF]/10"
+                )}
               >
-                <AccordionTrigger className="py-3 hover:no-underline">
-                  <span className="text-left text-sm font-medium text-foreground">
+                {/* Trigger Button */}
+                <button
+                  type="button"
+                  id={`faq-question-${i}`}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${i}`}
+                  onClick={() => toggleItem(i)}
+                  className="w-full py-4 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg group cursor-pointer"
+                >
+                  <span className="text-sm font-medium text-foreground pr-4 group-hover:text-primary transition-colors">
                     {faq.q}
                   </span>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p className="pb-3 text-sm text-muted-foreground leading-relaxed">
+                  {/* Animated Arrow */}
+                  <motion.span
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex items-center justify-center text-muted-foreground shrink-0 group-hover:text-foreground transition-colors"
+                  >
+                    <ChevronDown className="h-4 w-4" />
+                  </motion.span>
+                </button>
+
+                {/* Animated Answer Region */}
+                <motion.div
+                  id={`faq-answer-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${i}`}
+                  initial={false}
+                  animate={{
+                    height: isOpen ? "auto" : 0,
+                    opacity: isOpen ? 1 : 0,
+                  }}
+                  transition={{
+                    height: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
+                    opacity: { duration: 0.25, ease: "easeInOut" },
+                  }}
+                  className="overflow-hidden"
+                >
+                  <motion.p
+                    initial={false}
+                    animate={{
+                      y: isOpen ? 0 : -6,
+                    }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    className="pb-4 text-sm text-muted-foreground leading-relaxed"
+                  >
                     {faq.a}
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                  </motion.p>
+                </motion.div>
+              </motion.div>
+            )
+          })}
         </div>
       </AnimationContainer>
     </section>

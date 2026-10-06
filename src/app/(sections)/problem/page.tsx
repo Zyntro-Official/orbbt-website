@@ -2,8 +2,6 @@
 Problem
 */
 
-"use client"
-
 // Imports
 import { X } from "lucide-react"
 

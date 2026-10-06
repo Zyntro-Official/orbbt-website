@@ -10,9 +10,10 @@ import Link from "next/link"
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Terms and Conditions — Orbbt",
+  title: "Terms and Conditions",
   description:
     "The terms governing your use of Orbbt, including accounts, billing, your data, and acceptable use.",
+  alternates: { canonical: "/terms" },
 }
 
 export default function TermsPage() {

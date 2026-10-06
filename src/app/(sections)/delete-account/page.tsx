@@ -10,8 +10,10 @@ import Link from "next/link"
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Delete Your Account — Orbbt",
-  description: "How to delete your Orbbt account and request removal of associated data.",
+  title: "Delete Your Account",
+  description:
+    "How to delete your Orbbt account and request removal of associated data.",
+  alternates: { canonical: "/delete-account" },
 }
 
 export default function DeleteAccountPage() {

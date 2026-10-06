@@ -10,9 +10,10 @@ import Link from "next/link"
 
 // Metadata
 export const metadata: Metadata = {
-  title: "Privacy Policy — Orbbt",
+  title: "Privacy Policy",
   description:
     "Learn how Orbbt collects, uses, stores, shares, and protects information across the web application, browser extension, and mobile applications.",
+  alternates: { canonical: "/privacy" },
 }
 
 export default function PrivacyPage() {

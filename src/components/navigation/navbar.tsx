@@ -24,7 +24,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
-import { FileText, Menu, Receipt, Shield, Smartphone } from "lucide-react"
+import { ChromeIcon } from "@/components/icons/chrome"
+import { FileText, Menu, Receipt, Shield } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import * as React from "react"
@@ -73,24 +74,21 @@ export function Navbar() {
           </Link>
           
           <Link
-            href="/#pricing"
-            className={cn(navigationMenuTriggerStyle(), "text-muted-foreground hover:text-foreground")}
-          >
-            Pricing
-          </Link>
-
-          <Link
-            href="/#waitlist"
+            href="/#chrome-extension"
             className={cn(
               navigationMenuTriggerStyle(),
               "inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
             )}
           >
-            <span>Waitlist</span>
-            <span className="inline-flex items-center rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-semibold text-primary">
-              <Smartphone className="mr-0.5 h-3 w-3" />
-              Mobile App
-            </span>
+            <ChromeIcon className="h-3.5 w-3.5" />
+            <span>Chrome Extension</span>
+          </Link>
+
+          <Link
+            href="/#pricing"
+            className={cn(navigationMenuTriggerStyle(), "text-muted-foreground hover:text-foreground")}
+          >
+            Pricing
           </Link>
 
           {/* Policies Navigation Menu */}
@@ -192,22 +190,20 @@ export function Navbar() {
                 </Link>
 
                 <Link
+                  href="/#chrome-extension"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center gap-2 text-base font-medium text-foreground transition-colors hover:text-primary"
+                >
+                  <ChromeIcon className="h-4 w-4" />
+                  Chrome Extension
+                </Link>
+
+                <Link
                   href="/#pricing"
                   onClick={() => setIsOpen(false)}
                   className="text-base font-medium text-foreground transition-colors hover:text-primary"
                 >
                   Pricing
-                </Link>
-
-                <Link
-                  href="/#waitlist"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between text-base font-medium text-foreground transition-colors hover:text-primary"
-                >
-                  <span>Waitlist</span>
-                  <span className="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-semibold text-primary">
-                    Mobile App
-                  </span>
                 </Link>
 
                 {/* Policies Section in Mobile */}
