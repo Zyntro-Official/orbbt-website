@@ -15,19 +15,19 @@ import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
 import { buttonVariants } from "@/components/ui/button"
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
 } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
 } from "@/components/ui/tooltip"
 
 // Utils
@@ -113,7 +113,7 @@ const PLANS = [
 ]
 
 export default function PricingPage() {
-  const MotionTabTrigger = motion(TabsTrigger)
+  const MotionTabTrigger = motion.create(TabsTrigger)
   const [activeTab, setActiveTab] = useState<Tab>("monthly")
 
   return (

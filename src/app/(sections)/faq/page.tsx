@@ -17,43 +17,13 @@ import {
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
 
-// Constants
-const FAQS = [
-  {
-    q: "What is orbbt?",
-    a: "An all-in-one workspace for your job search: saved jobs, contact management, company profiles, deadline reminders, and follow-ups in one place.",
-  },
-  {
-    q: "Can I import jobs I already saved?",
-    a: "Yes. Paste a job URL or use the browser extension, and orbbt pulls in the role, company, and description.",
-  },
-  {
-    q: "Does the AI apply to jobs for me?",
-    a: "No. You stay in control of everything. The AI helps score job compatibility, highlight skill gaps, and track deadlines, while you decide where and what gets submitted.",
-  },
-  {
-    q: "Where does my data live?",
-    a: "Your applications and documents are private to your account and are never used to train public models.",
-  },
-  {
-    q: "Is there a free plan?",
-    a: "Yes. The free plan covers up to 25 tracked applications, the pipeline, and the browser extension.",
-  },
-  {
-    q: "Which browsers does the extension support?",
-    a: "Chrome and other Chromium browsers at launch, with Firefox planned.",
-  },
-  {
-    q: "When is the mobile app coming?",
-    a: "It is in development. Waitlist members get access first when the beta opens.",
-  },
-  {
-    q: "Can I cancel Pro anytime?",
-    a: "Yes. Pro is month to month, and your data stays accessible on the free plan.",
-  },
-]
+// Types
+type FAQItem = {
+  q: string
+  a: string
+}
 
-export default function FaqPage() {
+export default function FaqPage({ faqs }: { faqs: FAQItem[] }) {
   // States
   const [open, setOpen] = useState<string>("0")
 
@@ -69,7 +39,7 @@ export default function FaqPage() {
           <AppBadge className="mb-6">FAQ</AppBadge>
 
           {/* Title */}
-          <h2 className="text-center text-3xl md:text-5xl !leading-[1.1] font-bold font-heading text-foreground mt-6">
+          <h2 className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6">
             Questions,{" "}
             <span className="bg-gradient-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
               answered.
@@ -91,7 +61,7 @@ export default function FaqPage() {
             onValueChange={setOpen}
             className="space-y-2 border-0 py-2"
           >
-            {FAQS.map((faq, i) => (
+            {faqs?.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={String(i)}
