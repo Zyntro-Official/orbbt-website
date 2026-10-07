@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           </h1>
 
           <p className="mt-4 text-center text-sm text-muted-foreground">
-            Last Updated: September 24, 2026
+            Last Updated: October 7, 2026
           </p>
         </div>
 
@@ -79,6 +79,22 @@ export default function PrivacyPage() {
             email address, and profile picture. We use this information to
             create and authenticate your Orbbt Account. We do not access, read,
             request, or store the contents of your Gmail messages.
+          </p>
+
+          <h3 className="text-lg font-semibold text-foreground mt-6">
+            Website and Product Analytics
+          </h3>
+          <p className="text-muted-foreground leading-relaxed">
+            We use PostHog to measure visits to the Orbbt website, clicks on
+            selected calls to action, and limited use of the web application.
+            These events use an anonymous browser identifier before sign-in and
+            your Orbbt account identifier after verified sign-in. This lets us
+            understand how website visits lead to account creation. We limit
+            website page addresses to a known route without search parameters,
+            and group campaign source and medium into broad categories.
+            We do not intentionally send resume contents, job descriptions,
+            form entries, email addresses, or payment identifiers as analytics
+            event properties.
           </p>
 
           {/* Job Data */}
@@ -356,6 +372,10 @@ export default function PrivacyPage() {
               background processing for resume analysis and reminders.
             </li>
             <li>
+              <strong className="text-foreground">PostHog</strong> —
+              limited website and product analytics described above.
+            </li>
+            <li>
               <strong className="text-foreground">AI model provider</strong> —
               processes resume text and job details for requested analyses.
               The provider may change; contact us for the provider currently in use.
@@ -402,6 +422,14 @@ export default function PrivacyPage() {
             extension storage for authentication and limited display data, as
             described above. You can clear browser storage through your
             browser settings, although doing so may sign you out.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            The website and web application also use a first-party PostHog
+            analytics cookie shared across orbbt.app and web.orbbt.app. It
+            allows an anonymous website visit to be associated with a later
+            verified sign-in. Signing out resets the analytics identity on the
+            web application. Clearing browser cookies also removes the stored
+            browser identifier.
           </p>
 
           {/* Security */}

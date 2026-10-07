@@ -4,6 +4,7 @@ Root Layout
 
 // Imports
 import { TooltipProvider } from "@/components/ui/tooltip"
+import WebsiteAnalyticsBridge from "@/lib/analytics/WebsiteAnalyticsBridge"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -65,7 +66,10 @@ export default function RootLayout({
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <TooltipProvider>{children}</TooltipProvider>
+        <TooltipProvider>
+          <WebsiteAnalyticsBridge />
+          {children}
+        </TooltipProvider>
       </body>
     </html>
   )

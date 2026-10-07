@@ -8,6 +8,7 @@
 import { CheckCircleIcon } from "lucide-react"
 import { motion } from "motion/react"
 import Link from "next/link"
+import MarketingLink from "@/components/analytics/MarketingLink"
 import { useState } from "react"
 
 // UI Components
@@ -317,8 +318,10 @@ export default function PricingPage() {
                       </CardContent>
 
                       <CardFooter className="w-full pt-0">
-                        <Link
+                        <MarketingLink
                           href={plan.btn.href[period]}
+                          destination={plan.featured ? "pricing" : "signup"}
+                          placement="content"
                           className={buttonVariants({
                             className: cn(
                               "w-full",
@@ -328,7 +331,7 @@ export default function PricingPage() {
                           })}
                         >
                           {plan.btn.text}
-                        </Link>
+                        </MarketingLink>
                       </CardFooter>
                     </Card>
                   </div>

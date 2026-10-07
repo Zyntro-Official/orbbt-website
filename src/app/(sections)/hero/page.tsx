@@ -5,7 +5,7 @@ Hero
 // Imports
 import { ArrowRight, Bell, Briefcase, Building2, Users } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import MarketingLink from "@/components/analytics/MarketingLink"
 
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
@@ -65,9 +65,9 @@ export default function HeroPage() {
             asChild
             className="w-full sm:w-auto h-12 px-8 text-base bg-[#571FFF] hover:bg-[#571FFF]/90 shadow-lg shadow-[#571FFF]/25"
           >
-            <a href="https://web.orbbt.app" target="_blank">
+            <MarketingLink href="https://web.orbbt.app/signup" target="_blank" rel="noopener noreferrer" destination="signup" placement="hero">
               Try free on web <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            </MarketingLink>
           </Button>
           <Button
             variant="outline"
@@ -75,9 +75,9 @@ export default function HeroPage() {
             asChild
             className="w-full sm:w-auto h-12 px-8 text-base"
           >
-            <Link href="#chrome-extension">
+            <MarketingLink href="#chrome-extension" destination="extension" placement="hero">
               Get Chrome Extension
-            </Link>
+            </MarketingLink>
           </Button>
         </div>
 

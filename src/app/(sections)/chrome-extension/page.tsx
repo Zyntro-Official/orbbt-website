@@ -3,7 +3,7 @@
 */
 
 // Icons
-import Link from "next/link"
+import MarketingLink from "@/components/analytics/MarketingLink"
 
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
@@ -93,15 +93,15 @@ export default function ChromeExtensionPage() {
               className="h-12 px-8 text-base bg-[#571FFF] hover:bg-[#571FFF]/90 shadow-lg shadow-[#571FFF]/25"
             >
               {CHROME_STORE_URL ? (
-                <a href={installHref} target="_blank" rel="noopener noreferrer">
+                <MarketingLink href={installHref} target="_blank" rel="noopener noreferrer" destination="extension" placement="content">
                   {/* <ChromeIcon className="mr-2 h-4 w-4" /> */}
                   {installLabel}
-                </a>
+                </MarketingLink>
               ) : (
-                <Link href={installHref}>
+                <MarketingLink href={installHref} destination="extension" placement="content">
                   {/* <ChromeIcon className="mr-2 h-4 w-4" /> */}
                   {installLabel}
-                </Link>
+                </MarketingLink>
               )}
             </Button>
           </div>

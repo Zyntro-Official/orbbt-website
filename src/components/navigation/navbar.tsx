@@ -6,6 +6,7 @@
 
 // Imports
 import { Button } from "@/components/ui/button"
+import MarketingLink from "@/components/analytics/MarketingLink"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -140,9 +141,9 @@ export function Navbar() {
             </a>
           </Button>
           <Button asChild variant="default" className="font-medium bg-[#571FFF] hover:bg-[#571FFF]/90 shadow-sm shadow-[#571FFF]/20 cursor-pointer">
-            <a href="https://web.orbbt.app/signup" target="_blank" rel="noopener noreferrer">
+            <MarketingLink href="https://web.orbbt.app/signup" target="_blank" rel="noopener noreferrer" destination="signup" placement="nav">
               Signup
-            </a>
+            </MarketingLink>
           </Button>
         </div>
 
@@ -234,9 +235,9 @@ export function Navbar() {
                   </a>
                 </Button>
                 <Button asChild variant="default" className="w-full justify-center bg-[#571FFF] hover:bg-[#571FFF]/90 text-white">
-                  <a href="https://web.orbbt.app/signup" target="_blank" rel="noopener noreferrer">
+                  <MarketingLink href="https://web.orbbt.app/signup" target="_blank" rel="noopener noreferrer" destination="signup" placement="nav">
                     Signup
-                  </a>
+                  </MarketingLink>
                 </Button>
               </SheetFooter>
             </SheetContent>
