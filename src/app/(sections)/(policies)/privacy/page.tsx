@@ -86,13 +86,18 @@ export default function PrivacyPage() {
           </h3>
           <p className="text-muted-foreground leading-relaxed">
             We use PostHog to measure visits to the Orbbt website, clicks on
-            selected calls to action, and limited use of the web and mobile
-            applications. Website events use an anonymous browser identifier
+            selected calls to action, and limited use of the web, mobile, and
+            browser extension applications. Website events use an anonymous browser identifier
             before sign-in. Web and mobile application events use your Orbbt
-            account identifier after verified sign-in. This lets us understand
+            account identifier after verified sign-in. Extension events use the
+            account identifier from its authenticated session. This lets us understand
             how website visits lead to account creation and how major product
             features are used. Mobile events contain only named screens and
-            broad action categories, without route parameters or job IDs. We
+            broad action categories, without route parameters or job IDs.
+            Extension events include opening its interface, extraction results,
+            and successful job, company, or contact saves. These events include
+            only broad site, entity, and error categories, without the page address
+            or content extracted from a page. We
             limit website page addresses to a known route without search
             parameters, and group campaign source and medium into broad categories.
             We do not intentionally send resume contents, job descriptions,
@@ -665,3 +670,4 @@ export default function PrivacyPage() {
     </section>
   )
 }
+
