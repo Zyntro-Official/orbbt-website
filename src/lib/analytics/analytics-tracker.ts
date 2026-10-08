@@ -46,6 +46,7 @@ const eventProperties = {
   quick_tour_skipped: ['step_group'],
   job_create_requested: ['source'],
   job_created: ['source', 'initial_status'],
+  job_status_change_requested: ['from_status', 'to_status'],
   job_status_changed: ['from_status', 'to_status'],
   job_deleted: [],
   jobs_view_changed: ['view'],
@@ -67,6 +68,7 @@ const eventProperties = {
   subscription_activated: ['billing_interval', 'billing_mode'],
   subscription_cancelled: ['billing_mode'],
   payment_failed: ['billing_mode'],
+  reminder_settings_updated: [],
   reminder_sent: ['channel', 'days_before'],
 } as const satisfies Record<string, readonly (keyof typeof propertyValues | 'days_before')[]>
 

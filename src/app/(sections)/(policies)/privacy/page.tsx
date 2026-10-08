@@ -32,7 +32,7 @@ export default function PrivacyPage() {
           </h1>
 
           <p className="mt-4 text-center text-sm text-muted-foreground">
-            Last Updated: October 7, 2026
+            Last Updated: October 8, 2026
           </p>
         </div>
 
@@ -86,12 +86,15 @@ export default function PrivacyPage() {
           </h3>
           <p className="text-muted-foreground leading-relaxed">
             We use PostHog to measure visits to the Orbbt website, clicks on
-            selected calls to action, and limited use of the web application.
-            These events use an anonymous browser identifier before sign-in and
-            your Orbbt account identifier after verified sign-in. This lets us
-            understand how website visits lead to account creation. We limit
-            website page addresses to a known route without search parameters,
-            and group campaign source and medium into broad categories.
+            selected calls to action, and limited use of the web and mobile
+            applications. Website events use an anonymous browser identifier
+            before sign-in. Web and mobile application events use your Orbbt
+            account identifier after verified sign-in. This lets us understand
+            how website visits lead to account creation and how major product
+            features are used. Mobile events contain only named screens and
+            broad action categories, without route parameters or job IDs. We
+            limit website page addresses to a known route without search
+            parameters, and group campaign source and medium into broad categories.
             We do not intentionally send resume contents, job descriptions,
             form entries, email addresses, or payment identifiers as analytics
             event properties.
@@ -430,6 +433,12 @@ export default function PrivacyPage() {
             verified sign-in. Signing out resets the analytics identity on the
             web application. Clearing browser cookies also removes the stored
             browser identifier.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mt-4">
+            The mobile application stores a PostHog analytics identifier on
+            your device to associate approved product events with your verified
+            account. Signing out or deleting your account resets that identifier
+            on the device. Uninstalling the app removes its local storage.
           </p>
 
           {/* Security */}
