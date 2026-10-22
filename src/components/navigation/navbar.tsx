@@ -5,8 +5,9 @@
 "use client"
 
 // Imports
-import { Button } from "@/components/ui/button"
 import MarketingLink from "@/components/analytics/MarketingLink"
+import { ChromeIcon } from "@/components/icons/chrome"
+import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -25,7 +26,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
-import { ChromeIcon } from "@/components/icons/chrome"
 import { FileText, Menu, Receipt, Shield } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -75,7 +75,7 @@ export function Navbar() {
           </Link>
           
           <Link
-            href="/#chrome-extension"
+            href="/extension"
             className={cn(
               navigationMenuTriggerStyle(),
               "inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"
@@ -163,7 +163,7 @@ export function Navbar() {
                 <SheetTitle>
                   <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-2.5">
                     <Image
-                      src="/orbbt-logo.png"
+                      src="/orbbt-logo.svg"
                       alt="orbbt logo"
                       width={32}
                       height={32}
@@ -191,7 +191,7 @@ export function Navbar() {
                 </Link>
 
                 <Link
-                  href="/#chrome-extension"
+                  href="/extension"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-base font-medium text-foreground transition-colors hover:text-primary"
                 >

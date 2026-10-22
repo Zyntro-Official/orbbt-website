@@ -35,4 +35,7 @@ export const faqs = [
 ] as const
 
 // Type
-export type FAQItem = (typeof faqs)[number]
+export interface FAQItem {
+  q: string
+  a: string
+}

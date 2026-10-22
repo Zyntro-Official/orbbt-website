@@ -1,11 +1,12 @@
 /*
-Hero
+  Hero
 */
 
 // Imports
-import { ArrowRight, Bell, Briefcase, Building2, Users } from "lucide-react"
-import Image from "next/image"
 import MarketingLink from "@/components/analytics/MarketingLink"
+import { ChromeIcon } from "@/components/icons/chrome"
+import { ArrowRight, Bell, Briefcase, Sparkles, Users } from "lucide-react"
+import Image from "next/image"
 
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
@@ -36,25 +37,25 @@ export default function HeroPage() {
 
         {/* Lead Subtitle */}
         <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl leading-relaxed">
-          Track applications, manage companies, remember deadlines, and follow up from one calm place.
+          Track applications, manage contacts, remember deadlines, and follow up from one calm place.
         </p>
 
         {/* Core Product Benefits Row */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground">
           <span className="flex items-center gap-1.5">
-            <Briefcase className="h-3.5 w-3.5 text-[#571FFF]" /> Application tracker
+            <Briefcase className="h-3.5 w-3.5 text-[#571FFF]" /> Application Tracker
           </span>
           <span className="hidden sm:inline text-border">•</span>
           <span className="flex items-center gap-1.5">
-            <Building2 className="h-3.5 w-3.5 text-[#571FFF]" /> Company Management
+            <Users className="h-3.5 w-3.5 text-[#571FFF]" /> Contacts & Companies
           </span>
           <span className="hidden sm:inline text-border">•</span>
           <span className="flex items-center gap-1.5">
-            <Bell className="h-3.5 w-3.5 text-[#571FFF]" /> Deadline reminders
+            <Bell className="h-3.5 w-3.5 text-[#571FFF]" /> Deadline Reminders
           </span>
           <span className="hidden sm:inline text-border">•</span>
           <span className="flex items-center gap-1.5">
-            <Users className="h-3.5 w-3.5 text-[#571FFF]" /> Contact management
+            <Sparkles className="h-3.5 w-3.5 text-[#571FFF]" /> AI Resume Score
           </span>
         </div>
 
@@ -75,7 +76,8 @@ export default function HeroPage() {
             asChild
             className="w-full sm:w-auto h-12 px-8 text-base"
           >
-            <MarketingLink href="#chrome-extension" destination="extension" placement="hero">
+            <MarketingLink href="/extension" destination="extension" placement="hero">
+              <ChromeIcon className="mr-2 h-4 w-4" />
               Get Chrome Extension
             </MarketingLink>
           </Button>
@@ -103,7 +105,7 @@ export default function HeroPage() {
               borderWidth={4}
             />
             <Image
-              src="/image.svg"
+              src="/hero.png"
               alt="orbbt job application tracker dashboard preview"
               width={1600}
               height={847}

@@ -59,7 +59,7 @@ export const orgSchema = {
   name: "Orbbt",
   legalName: "Zyntro",
   url: "https://orbbt.app",
-  logo: "https://orbbt.app/orbbt-logo.png",
+  logo: "https://orbbt.app/orbbt-logo.svg",
   sameAs: [
     "https://www.linkedin.com/company/orbbt",
     "https://instagram.com/orbbt",

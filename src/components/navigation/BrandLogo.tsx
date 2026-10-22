@@ -1,5 +1,5 @@
 /* 
-    Brand Logo for footer and navbar
+  Brand Logo for footer and navbar
 */
 
 // Imports
@@ -11,7 +11,7 @@ const BrandLogo = () => {
     <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2.5">
             <Image
-              src="/orbbt-logo.png"
+              src="/orbbt-logo.svg"
               alt="orbbt logo"
               width={32}
               height={32}

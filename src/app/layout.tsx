@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Save jobs from LinkedIn & Indeed in one click. Track applications on a Kanban board or table, with deadline reminders.",
     images: [
       {
-        url: "/image.svg",
+        url: "/hero.png",
         width: 1662,
         height: 865,
         alt: "Orbbt job application tracker",
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     title: "Orbbt: Job Application Tracker",
     description:
       "Your job hunt, organized. Kanban board, table and deadline reminders.",
-    images: ["/image.svg"],
+    images: ["/hero.png"],
   },
   icons: {
-    icon: "/orbbt-logo.png",
+    icon: "/orbbt-logo.svg",
   },
 }
 

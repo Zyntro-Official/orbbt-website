@@ -23,7 +23,7 @@
 - Each page is a standalone `.html` file with inline `<style>` and `<script>` blocks.
 - No shared component system; styling/markup is duplicated per page but kept visually consistent via shared CSS custom properties and class names.
 - Fonts loaded from Google Fonts CDN (`Inter`, `Geist Mono`, `Instrument Serif`), saved locally per page in `*_files/css2` and `*_files/css2(1)`.
-- Logo asset `orbbt-logo.png` lives in each page's `*_files/` folder.
+- Logo asset `orbbt-logo.svg` lives in each page's `*_files/` folder.
 - Production/deployed URL root: `https://danish-shah-cyber.github.io/orbbt-landing-page/`
 - Forms are **demo-only** — JS intercepts submit, shows "Saved for demo. Connect this form to your backend later." No real submission logic.
 
@@ -46,7 +46,7 @@ landing-page-prototype/
 └── terms-and-conditions_files/
 ```
 
-Note: `index.html` references its assets (`orbbt-logo.png`, `app-preview.png`) relative to its own folder (not a `*_files/` subfolder), while the other pages reference their `*_files/` subfolders because they were saved from the deployed GitHub Pages URL.
+Note: `index.html` references its assets (`orbbt-logo.svg`, `app-preview.png`) relative to its own folder (not a `*_files/` subfolder), while the other pages reference their `*_files/` subfolders because they were saved from the deployed GitHub Pages URL.
 
 ---
 
@@ -201,7 +201,7 @@ The flagship page. Sections in order:
 ## 8. Known Inconsistencies / Notes for LLMs
 
 1. **Violet hex differs**: `index.html` `--violet: #4d1fe8`; subpages `--violet: #5b24ff`. Pick `#4d1fe8` for canonical index redesigns.
-2. **Asset paths**: `index.html` uses bare `orbbt-logo.png` / `app-preview.png`; the other 5 pages use `./<page>_files/...` (saved-from-URL artifacts). When editing `index.html`, keep bare paths; when editing subpages, keep `*_files/` paths — or normalize all to a single `/assets` folder in a future refactor.
+2. **Asset paths**: `index.html` uses bare `orbbt-logo.svg` / `app-preview.png`; the other 5 pages use `./<page>_files/...` (saved-from-URL artifacts). When editing `index.html`, keep bare paths; when editing subpages, keep `*_files/` paths — or normalize all to a single `/assets` folder in a future refactor.
 3. **`app-preview.png`** is referenced in `index.html` but lives only at the repo root (used by hero product preview + all 4 feature tab images, which all point at the same file).
 4. References to deployed URLs (`https://danish-shah-cyber.github.io/orbbt-landing-page/...`) are baked into the saved subpages' internal links; `index.html` uses clean relative paths (`auth.html`, `waitlist.html`, `privacy-policy.html`, etc.). Prefer the clean relative form.
 5. **No real backend / form handling** — every form is a demo stub. Auth, waitlist, and contact all need wiring.

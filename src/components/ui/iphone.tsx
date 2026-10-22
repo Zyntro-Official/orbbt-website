@@ -19,6 +19,7 @@ const RADIUS_V = (SCREEN_RADIUS / SCREEN_HEIGHT) * 100
 export interface IphoneProps extends HTMLAttributes<HTMLDivElement> {
   src?: string
   videoSrc?: string
+  children?: React.ReactNode
 }
 
 export function Iphone({
@@ -26,10 +27,11 @@ export function Iphone({
   videoSrc,
   className,
   style,
+  children,
   ...props
 }: IphoneProps) {
   const hasVideo = !!videoSrc
-  const hasMedia = hasVideo || !!src
+  const hasMedia = hasVideo || !!src || !!children
 
   return (
     <div
@@ -40,17 +42,19 @@ export function Iphone({
       }}
       {...props}
     >
-      {hasVideo && (
-        <div
-          className="pointer-events-none absolute z-0 overflow-hidden"
-          style={{
-            left: `${LEFT_PCT}%`,
-            top: `${TOP_PCT}%`,
-            width: `${WIDTH_PCT}%`,
-            height: `${HEIGHT_PCT}%`,
-            borderRadius: `${RADIUS_H}% / ${RADIUS_V}%`,
-          }}
-        >
+      <div
+        className="pointer-events-none absolute z-0 overflow-hidden"
+        style={{
+          left: `${LEFT_PCT}%`,
+          top: `${TOP_PCT}%`,
+          width: `${WIDTH_PCT}%`,
+          height: `${HEIGHT_PCT}%`,
+          borderRadius: `${RADIUS_H}% / ${RADIUS_V}%`,
+        }}
+      >
+        {children ? (
+          children
+        ) : hasVideo ? (
           <video
             className="block size-full object-cover"
             src={videoSrc}
@@ -60,27 +64,14 @@ export function Iphone({
             playsInline
             preload="metadata"
           />
-        </div>
-      )}
-
-      {!hasVideo && src && (
-        <div
-          className="pointer-events-none absolute z-0 overflow-hidden"
-          style={{
-            left: `${LEFT_PCT}%`,
-            top: `${TOP_PCT}%`,
-            width: `${WIDTH_PCT}%`,
-            height: `${HEIGHT_PCT}%`,
-            borderRadius: `${RADIUS_H}% / ${RADIUS_V}%`,
-          }}
-        >
+        ) : src ? (
           <img
             src={src}
             alt=""
             className="block size-full object-cover object-top"
           />
-        </div>
-      )}
+        ) : null}
+      </div>
 
       <svg
         viewBox={`0 0 ${PHONE_WIDTH} ${PHONE_HEIGHT}`}

@@ -17,7 +17,20 @@ import { cn } from "@/lib/utils"
 // Types
 import type { FAQItem } from "@/lib/faqs"
 
-export default function FaqPage({ faqs }: { faqs: readonly FAQItem[] }) {
+// Props
+interface FaqPageProps {
+  faqs: readonly FAQItem[]
+  badge?: string
+  title?: React.ReactNode
+  subtitle?: string
+}
+
+export default function FaqPage({
+  faqs,
+  badge = "FAQ",
+  title,
+  subtitle = "Quick answers to the most common questions about orbbt.",
+}: FaqPageProps) {
   // States
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
@@ -35,22 +48,26 @@ export default function FaqPage({ faqs }: { faqs: readonly FAQItem[] }) {
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center w-full py-8">
           {/* Eyebrow Badge */}
-          <AppBadge className="mb-6">FAQ</AppBadge>
+          <AppBadge className="mb-6">{badge}</AppBadge>
 
           {/* Title */}
           <h2
             id="faq-heading"
             className="text-center text-3xl md:text-5xl leading-[1.1]! font-bold font-heading text-foreground mt-6"
           >
-            Questions,{" "}
-            <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              answered.
-            </span>
+            {title ?? (
+              <>
+                Questions,{" "}
+                <span className="bg-linear-to-r from-[#571FFF] via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                  answered.
+                </span>
+              </>
+            )}
           </h2>
 
           {/* Subtitle */}
           <p className="mt-4 text-center text-lg text-muted-foreground max-w-lg">
-            Quick answers to the most common questions about orbbt.
+            {subtitle}
           </p>
         </div>
 

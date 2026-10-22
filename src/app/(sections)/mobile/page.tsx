@@ -4,6 +4,9 @@
 
 "use client"
 
+// Imports
+import Image from "next/image"
+
 // UI Components
 import AnimationContainer from "@/components/ui/animation-container"
 import { AppBadge } from "@/components/ui/app-badge"
@@ -136,10 +139,18 @@ export default function MobileWaitlistPage() {
           {/* Right — Static iPhone */}
           <div className="relative hidden lg:flex justify-center">
             <div className="w-full max-w-[320px]">
-              <Iphone
-                src="/image.svg"
-                className="w-full drop-shadow-[0_35px_70px_rgba(87,31,255,0.20)]"
-              />
+              <Iphone className="w-full drop-shadow-[0_35px_70px_rgba(87,31,255,0.20)]">
+                <div className="flex size-full items-center justify-center bg-background">
+                  <Image
+                    src="/orbbt-logo-rounded.svg"
+                    alt="Orbbt Logo"
+                    width={32}
+                    height={32}
+                    loading="eager"
+                    className="size-16"
+                  />
+                </div>
+              </Iphone>
             </div>
           </div>
         </div>
