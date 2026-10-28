@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     images: ["/hero.png"],
   },
   icons: {
-    icon: "/orbbt-logo.svg",
+    icon: "/orbbt-logo-rounded.png",
   },
 }
 

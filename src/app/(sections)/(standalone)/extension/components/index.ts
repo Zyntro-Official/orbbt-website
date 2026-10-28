@@ -1,0 +1,5 @@
+export { default as ExtensionHero } from "./ExtensionHero"
+export { default as ExtensionHowItWorks } from "./ExtensionHowItWorks"
+export { default as ExtensionFeatures } from "./ExtensionFeatures"
+export { default as ExtensionFaq } from "./ExtensionFaq"
+export { default as ExtensionCta } from "./ExtensionCta"

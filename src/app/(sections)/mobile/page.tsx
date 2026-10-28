@@ -142,7 +142,7 @@ export default function MobileWaitlistPage() {
               <Iphone className="w-full drop-shadow-[0_35px_70px_rgba(87,31,255,0.20)]">
                 <div className="flex size-full items-center justify-center bg-background">
                   <Image
-                    src="/orbbt-logo-rounded.svg"
+                    src="/orbbt-logo-squared.svg"
                     alt="Orbbt Logo"
                     width={32}
                     height={32}

@@ -105,7 +105,7 @@ export default function HeroPage() {
               borderWidth={4}
             />
             <Image
-              src="/hero.png"
+              src="/new/kanban.png"
               alt="orbbt job application tracker dashboard preview"
               width={1600}
               height={847}
