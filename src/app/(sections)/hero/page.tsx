@@ -109,7 +109,7 @@ export default function HeroPage() {
               alt="orbbt job application tracker dashboard preview"
               width={1600}
               height={847}
-              priority
+              preload
               className="rounded-md lg:rounded-xl bg-foreground/10 ring-1 ring-border w-full h-auto"
             />
 
