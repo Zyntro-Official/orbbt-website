@@ -159,7 +159,7 @@ export default function ExtensionFeatures() {
                       alt={feature.alt}
                       width={1100}
                       height={600}
-                      loading="lazy"
+                      loading="eager"
                       className="w-full h-auto object-contain"
                     />
                   </div>

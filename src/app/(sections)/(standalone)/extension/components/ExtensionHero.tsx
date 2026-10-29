@@ -3,8 +3,8 @@
 */
 
 // Imports
-import Image from "next/image"
 import { ArrowRight, Layers, ShieldCheck, Zap } from "lucide-react"
+import Image from "next/image"
 
 // UI Components
 import MarketingLink from "@/components/analytics/MarketingLink"
@@ -153,7 +153,6 @@ export default function ExtensionHero({ storeUrl: customStoreUrl }: ExtensionHer
               width={1060}
               height={581}
               priority
-              quality={95}
               className="w-full h-auto object-contain rounded-xl"
             />
           </div>
